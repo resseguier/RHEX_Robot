@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MultiBody SYSTEM "/usr/local/share/MoGS/DTD/MoGS_Robot.dtd">
+<MultiBody scalable="no" base="free">
+<Robot_name> Hopping_Robot </Robot_name>
+<Bodies>
+	<Body>
+		<Label>MainBody</Label>
+		<Mass unit="kg">3.174</Mass>
+		<CoM unit="m"> 0.0 0.0 0.0</CoM>
+		<Inertia unit="kg/s2"> 0.291 0.0 0.0 0.0 0.362 0.0 0.0 0.0 0.72 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m"> -0.1	0.1</Box_X>
+		    <Box_Y unit="m"> -0.1	0.1</Box_Y>
+		    <Box_Z unit="m"> -0.1	0.1</Box_Z>
+		  </Box>-->
+		  <File> RHEX_cover/Semellea.wrl </File>
+		</Geometry>
+	</Body>
+	<Body>
+		<Label>FrontRightShoulder1</Label>
+		<Mass unit="kg">2.453</Mass>
+		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
+		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>FrontRightShoulder2</Label>
+		<Mass unit="kg">2.539</Mass>
+		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
+		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>FrontRightShoulder3</Label>
+		<Mass unit="kg">1.032</Mass>
+		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
+		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>FrontRightArm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>FrontRightForearm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleRightShoulder1</Label>
+		<Mass unit="kg">2.453</Mass>
+		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
+		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleRightShoulder2</Label>
+		<Mass unit="kg">2.539</Mass>
+		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
+		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleRightShoulder3</Label>
+		<Mass unit="kg">1.032</Mass>
+		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
+		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleRightArm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleRightForearm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackRightShoulder1</Label>
+		<Mass unit="kg">2.453</Mass>
+		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
+		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackRightShoulder2</Label>
+		<Mass unit="kg">2.539</Mass>
+		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
+		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackRightShoulder3</Label>
+		<Mass unit="kg">1.032</Mass>
+		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
+		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackRightArm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackRightForearm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>FrontLeftShoulder1</Label>
+		<Mass unit="kg">2.453</Mass>
+		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
+		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>FrontLeftShoulder2</Label>
+		<Mass unit="kg">2.539</Mass>
+		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
+		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>FrontLeftShoulder3</Label>
+		<Mass unit="kg">1.032</Mass>
+		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
+		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>FrontLeftArm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>FrontLeftForearm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleLeftShoulder1</Label>
+		<Mass unit="kg">2.453</Mass>
+		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
+		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleLeftShoulder2</Label>
+		<Mass unit="kg">2.539</Mass>
+		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
+		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleLeftShoulder3</Label>
+		<Mass unit="kg">1.032</Mass>
+		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
+		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleLeftArm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>MiddleLeftForearm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackLeftShoulder1</Label>
+		<Mass unit="kg">2.453</Mass>
+		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
+		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackLeftShoulder2</Label>
+		<Mass unit="kg">2.539</Mass>
+		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
+		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  0.0	0.2</Box_X>
+		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackLeftShoulder3</Label>
+		<Mass unit="kg">1.032</Mass>
+		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
+		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackLeftArm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>BackLeftForearm</Label>
+		<Mass unit="kg">1.871</Mass>
+		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
+		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		</Geometry>
+	</Body>	
+	
+ </Bodies>
+ <Joints>
+	<Joint type="fixed" innerId="MainBody" outerId="FrontRightShoulder1">
+		<Label>hip</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.171 0.0 -0.35 -90 0 90</StaticParameters>
+	</Joint>
+
+	<Joint type="revolute" axis="z" innerId="FrontRightShoulder1" outerId="FrontRightShoulder2">
+		<Label>knee</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="FrontRightShoulder2" outerId="FrontRightShoulder3">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="FrontRightShoulder3" outerId="FrontRightArm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0.127 0 -90 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>	
+	
+	<Joint type="revolute" axis="z" innerId="FrontRightArm" outerId="FrontRightForearm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.2 0 0 0 0 -90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="fixed" innerId="MainBody" outerId="MiddleRightShoulder1">
+		<Label>hip</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.171 0.0 0 -90 0 90</StaticParameters>
+	</Joint>
+
+	<Joint type="revolute" axis="z" innerId="MiddleRightShoulder1" outerId="MiddleRightShoulder2">
+		<Label>knee</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="MiddleRightShoulder2" outerId="MiddleRightShoulder3">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="MiddleRightShoulder3" outerId="MiddleRightArm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0.127 0 -90 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>	
+	
+	<Joint type="revolute" axis="z" innerId="MiddleRightArm" outerId="MiddleRightForearm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.2 0 0 0 0 -90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>	
+	
+	<Joint type="fixed" innerId="MainBody" outerId="BackRightShoulder1">
+		<Label>hip</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.171 0.0 0.35 -90 0 90</StaticParameters>
+	</Joint>
+
+	<Joint type="revolute" axis="z" innerId="BackRightShoulder1" outerId="BackRightShoulder2">
+		<Label>knee</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="BackRightShoulder2" outerId="BackRightShoulder3">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="BackRightShoulder3" outerId="BackRightArm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0.127 0 -90 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>	
+	
+	<Joint type="revolute" axis="z" innerId="BackRightArm" outerId="BackRightForearm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.2 0 0 0 0 -90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="fixed" innerId="MainBody" outerId="FrontLeftShoulder1">
+		<Label>hip</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.171 0.0 -0.35 -90 0 -90</StaticParameters>
+	</Joint>
+
+	<Joint type="revolute" axis="z" innerId="FrontLeftShoulder1" outerId="FrontLeftShoulder2">
+		<Label>knee</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="FrontLeftShoulder2" outerId="FrontLeftShoulder3">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="FrontLeftShoulder3" outerId="FrontLeftArm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0.127 0 -90 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>	
+	
+	<Joint type="revolute" axis="z" innerId="FrontLeftArm" outerId="FrontLeftForearm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.2 0 0 0 0 -90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="fixed" innerId="MainBody" outerId="MiddleLeftShoulder1">
+		<Label>hip</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree">-0.171 0.0 0 -90 0 -90</StaticParameters>
+	</Joint>
+
+	<Joint type="revolute" axis="z" innerId="MiddleLeftShoulder1" outerId="MiddleLeftShoulder2">
+		<Label>knee</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="MiddleLeftShoulder2" outerId="MiddleLeftShoulder3">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="MiddleLeftShoulder3" outerId="MiddleLeftArm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0.127 0 -90 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>	
+	
+	<Joint type="revolute" axis="z" innerId="MiddleLeftArm" outerId="MiddleLeftForearm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.2 0 0 0 0 -90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>	
+	
+	<Joint type="fixed" innerId="MainBody" outerId="BackLeftShoulder1">
+		<Label>hip</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.171 0.0 0.35 -90 0 -90</StaticParameters>
+	</Joint>
+
+	<Joint type="revolute" axis="z" innerId="BackLeftShoulder1" outerId="BackLeftShoulder2">
+		<Label>knee</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="BackLeftShoulder2" outerId="BackLeftShoulder3">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="BackLeftShoulder3" outerId="BackLeftArm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0.127 0 -90 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>	
+	
+	<Joint type="revolute" axis="z" innerId="BackLeftArm" outerId="BackLeftForearm">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.2 0 0 0 0 -90</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>	
+ </Joints>
+</MultiBody>
