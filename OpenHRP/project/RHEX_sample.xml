@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<grxui>
+    <mode name="Simulation">
+        <item class="com.generalrobotix.ui.item.GrxSimulationItem" name="SampleSimulation" select="true">
+            <property name="integrate" value="true"/>
+            <property name="viewsimulate" value="false"/>
+            <property name="totalTime" value="2.0 "/>
+            <property name="timeStep" value="0.001 "/>
+            <property name="realTime" value="false"/>
+            <property name="method" value="RUNGE_KUTTA"/>
+            <property name="gravity" value="9.81 "/>
+        </item>
+        <item class="com.generalrobotix.ui.item.GrxModelItem" name="floor" select="true" url="$(CURRENT_DIR)/../../../../../../usr/local/share/OpenHRP-3.1/sample/model/longfloor.wrl">
+            <property name="isRobot" value="false"/>
+            <property name="WAIST.rotation" value="0.0 1.0 0.0 0.0 "/>
+            <property name="WAIST.translation" value="0.0 0.0 -0.1 "/>
+            <property name="WAIST.velocity" value="0.0 0.0 0.0 "/>
+            <property name="markRadius" value="0.05 "/>
+            <property name="WAIST.angularVelocity" value="0.0 0.0 0.0 "/>
+        </item>
+        <item class="com.generalrobotix.ui.item.GrxModelItem" name="obstacle" select="true" url="$(CURRENT_DIR)/../../../../../../usr/local/share/OpenHRP-3.1/sample/model/obstacle.wrl">
+            <property name="isRobot" value="false"/>
+            <property name="WAIST.rotation" value="0.0 1.0 0.0 0.0 "/>
+            <property name="WAIST.translation" value="0.4 0.3 0.1 "/>
+            <property name="WAIST.velocity" value="0.0 0.0 0.0 "/>
+            <property name="markRadius" value="0.05 "/>
+            <property name="WAIST.angularVelocity" value="0.0 0.0 0.0 "/>
+        </item>	
+        <item class="com.generalrobotix.ui.item.GrxModelItem" name="RHEX" select="true" url="$(CURRENT_DIR)/../../../../../../usr/local/share/OpenHRP-3.1/sample/model/RHEX.wrl">
+            <property name="J_FR_L_SH_3.mode" value="Torque"/>
+            <property name="J_FR_R_SH_3.angle" value="0.0 "/>
+            <property name="J_BACK_L_SH_2.angle" value="0.0 "/>
+            <property name="J_FR_R_SH_2.angle" value="0.0 "/>
+            <property name="J_BACK_L_SH_1.angle" value="0.0 "/>
+            <property name="J_FR_R_SH_1.angle" value="0.0 "/>
+            <property name="J_BACK_L_SH_3.angle" value="0.0 "/>
+            <property name="J_FR_R_SH_2.mode" value="Torque"/>
+            <property name="J_BACK_R_EL_1.mode" value="Torque"/>
+            <property name="J_BACK_R_EL_1.angle" value="0.0 "/>
+            <property name="J_MID_L_SH_2.angle" value="0.0 "/>
+            <property name="J_MID_L_SH_1.angle" value="0.0 "/>
+            <property name="J_BACK_L_SH_1.mode" value="Torque"/>
+            <property name="J_MID_L_SH_3.angle" value="0.0 "/>
+            <property name="J_MID_R_EL_1.angle" value="0.0 "/>
+            <property name="J_BACK_L_SH_3.mode" value="Torque"/>
+            <property name="J_MID_L_EL_1.mode" value="Torque"/>
+            <property name="WAIST.rotation" value="1.0 0.0 0.0 1.57 "/>
+            <property name="J_BACK_R_SH_2.mode" value="Torque"/>
+            <property name="J_BACK_R_SH_2.angle" value="0.0 "/>
+            <property name="J_BACK_R_SH_1.angle" value="0.0 "/>
+            <property name="J_FR_L_EL_1.mode" value="Torque"/>
+            <property name="setupDirectory" value="$(CURRENT_DIR)/../../../../../../usr/local/share/OpenHRP-3.1/sample/controller/RHEX_sample"/>
+            <property name="J_BACK_R_SH_3.angle" value="0.0 "/>
+            <property name="J_MID_R_SH_1.angle" value="0.0 "/>
+            <property name="J_MID_L_SH_2.mode" value="Torque"/>
+            <property name="J_MID_R_SH_3.angle" value="0.0 "/>
+            <property name="J_MID_R_SH_2.angle" value="0.0 "/>
+            <property name="WAIST.angle" value="0.0 "/>
+            <property name="markRadius" value="0.05 "/>
+            <property name="J_MID_R_SH_1.mode" value="Torque"/>
+            <property name="J_BACK_L_EL_1.mode" value="Torque"/>
+            <property name="J_FR_L_SH_2.mode" value="Torque"/>
+            <property name="J_MID_R_SH_3.mode" value="Torque"/>
+            <property name="J_FR_R_SH_1.mode" value="Torque"/>
+            <property name="outport" value="angle:JOINT_VALUE"/>
+            <property name="J_FR_R_SH_3.mode" value="Torque"/>
+            <property name="J_FR_L_EL_1.angle" value="0.0 "/>
+            <property name="WAIST.mode" value="Torque"/>
+            <property name="J_BACK_L_SH_2.mode" value="Torque"/>
+            <property name="WAIST.translation" value="0.0 0.0 0.701 "/>
+            <property name="J_BACK_R_SH_1.mode" value="Torque"/>
+            <property name="inport" value="torque:JOINT_TORQUE"/>
+            <property name="J_BACK_R_SH_3.mode" value="Torque"/>
+            <property name="J_MID_R_EL_1.mode" value="Torque"/>
+            <property name="J_FR_L_SH_1.angle" value="0.0 "/>
+            <property name="J_FR_L_SH_3.angle" value="0.0 "/>
+            <property name="WAIST.velocity" value="0.0 0.0 0.0 "/>
+            <property name="J_MID_L_SH_1.mode" value="Torque"/>
+            <property name="J_FR_L_SH_2.angle" value="0.0 "/>
+            <property name="J_MID_L_SH_3.mode" value="Torque"/>
+            <property name="controller" value="RHEX_sampleController"/>
+            <property name="J_FR_R_EL_1.angle" value="0.0 "/>
+            <property name="WAIST.angularVelocity" value="0.0 0.0 0.0 "/>
+            <property name="isRobot" value="true"/>
+            <property name="J_MID_L_EL_1.angle" value="0.0 "/>
+            <property name="J_FR_R_EL_1.mode" value="Torque"/>
+            <property name="controlTime" value="0.005"/>
+            <property name="setupCommand" value="RHEX_sample$(BIN_SFX)"/>
+            <property name="J_FR_L_SH_1.mode" value="Torque"/>
+            <property name="J_MID_R_SH_2.mode" value="Torque"/>
+        </item>
+        <item class="com.generalrobotix.ui.item.GrxWorldStateItem" name="untitled" select="true">
+            <property name="logTimeStep" value="0.01 "/>
+        </item>
+        <item class="com.generalrobotix.ui.item.GrxCollisionPairItem" name="CP#floor#RHEX" select="true">
+            <property name="springConstant" value="0 0 0 0 0 0"/>
+            <property name="slidingFriction" value="0.5"/>
+            <property name="jointName2" value=""/>
+            <property name="jointName1" value=""/>
+            <property name="sprintDamperModel" value="false"/>
+            <property name="damperConstant" value="0 0 0 0 0 0"/>
+            <property name="objectName2" value="RHEX"/>
+            <property name="objectName1" value="floor"/>
+            <property name="staticFriction" value="0.5"/>
+        </item>
+        <item class="com.generalrobotix.ui.item.GrxCollisionPairItem" name="CP#obstacle#RHEX" select="true">
+            <property name="springConstant" value="0 0 0 0 0 0"/>
+            <property name="slidingFriction" value="0.5"/>
+            <property name="jointName2" value=""/>
+            <property name="jointName1" value=""/>
+            <property name="sprintDamperModel" value="false"/>
+            <property name="damperConstant" value="0 0 0 0 0 0"/>
+            <property name="objectName2" value="RHEX"/>
+            <property name="objectName1" value="obstacle"/>
+            <property name="staticFriction" value="0.5"/>
+        </item>
+        <item class="com.generalrobotix.ui.item.GrxGraphItem" name="GraphList1" select="true">
+            <property name="Graph1.dataItems" value=""/>
+            <property name="timeRange" value="1.0 0.8 "/>
+            <property name="Graph2.dataItems" value=""/>
+            <property name="Graph0.dataItems" value=""/>
+            <property name="Graph3.dataItems" value=""/>
+        </item>
+        <view class="com.generalrobotix.ui.view.Grx3DView" name="3DView">
+            <property name="view.mode" value="Room"/>
+            <property name="showCoM" value="false"/>
+            <property name="showCoMonFloor" value="false"/>
+            <property name="showDistance" value="false"/>
+            <property name="showIntersection" value="false"/>
+            <property name="eyeHomePosition" value="-0.70711 0 0.70711 3.85262 0.70711 0 0.70711 3.85262 0 1 0 0.8 0 0 0 1 "/>
+            <property name="showCollision" value="true"/>
+            <property name="showActualState" value="true"/>
+            <property name="showScale" value="true"/>
+        </view>
+        <view class="com.generalrobotix.ui.view.GrxRobotStatView" name="Robot State">
+            <property name="jcolumnWidth9" value="50"/>
+            <property name="jcolumnWidth8" value="40"/>
+            <property name="jcolumnWidth7" value="40"/>
+            <property name="jcolumnWidth6" value="40"/>
+            <property name="jcolumnWidth5" value="40"/>
+            <property name="jcolumnWidth4" value="60"/>
+            <property name="jcolumnWidth3" value="60"/>
+            <property name="jcolumnWidth10" value="69 "/>
+            <property name="jcolumnWidth2" value="60"/>
+            <property name="scolumnWidth6" value="75"/>
+            <property name="jcolumnWidth1" value="90"/>
+            <property name="scolumnWidth5" value="75"/>
+            <property name="scolumnWidth4" value="75"/>
+            <property name="jcolumnWidth0" value="30"/>
+            <property name="scolumnWidth3" value="75"/>
+            <property name="scolumnWidth2" value="75"/>
+            <property name="scolumnWidth1" value="75"/>
+            <property name="scolumnWidth0" value="110"/>
+        </view>
+    <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
+<descriptor descriptor="com.generalrobotix.ui.grxui.GrxUIPerspectiveFactory" id="com.generalrobotix.ui.grxui.GrxUIPerspectiveFactory.project" label="RHEX_sample"/>
+<window height="1054" width="1926" x="-2" y="-3"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.generalrobotix.ui.actionSet"/>
+<view id="com.generalrobotix.ui.view.Grx3DViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxControllerViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxCollisionPairViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxTextEditorViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxOpenHRPViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxLoggerViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxGraphViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxPropertyViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxRobotStatViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxJythonPromptViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxItemViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxORBMonitorViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxProcessManagerViewPart"/>
+<view id="com.generalrobotix.ui.view.GrxServerManagerViewPart"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="TopViews">
+<folder activePageID="com.generalrobotix.ui.view.GrxLoggerViewPart" appearance="2" expanded="2">
+<page content="com.generalrobotix.ui.view.GrxLoggerViewPart" label="Logger View"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@5aaa4bf8" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="TopViews">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="TopLeftViews" ratio="0.10856269" ratioLeft="71" ratioRight="583" relationship="4" relative="TopViews">
+<folder activePageID="com.generalrobotix.ui.view.GrxItemViewPart" appearance="2" expanded="2">
+<page content="com.generalrobotix.ui.view.GrxItemViewPart" label="Item View"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="RightMIDDLEViews" ratio="0.6" ratioLeft="606" ratioRight="404" relationship="2" relative="TopLeftViews">
+<folder activePageID="com.generalrobotix.ui.view.GrxPropertyViewPart" appearance="2" expanded="2">
+<page content="com.generalrobotix.ui.view.GrxGraphViewPart" label="Graph"/>
+<page content="com.generalrobotix.ui.view.GrxPropertyViewPart" label="Property View"/>
+<page content="com.generalrobotix.ui.view.GrxRobotStatViewPart" label="Robot State"/>
+<page content="com.generalrobotix.ui.view.GrxJythonPromptViewPart" label="JythonPrompt View"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="MiddleViews" ratio="0.41254523" ratioLeft="342" ratioRight="487" relationship="4" relative="TopLeftViews">
+<folder activePageID="com.generalrobotix.ui.view.Grx3DViewPart" appearance="2" expanded="2">
+<page content="com.generalrobotix.ui.view.Grx3DViewPart" label="3DView"/>
+<page content="com.generalrobotix.ui.view.GrxControllerViewPart" label="Controller"/>
+<page content="com.generalrobotix.ui.view.GrxCollisionPairViewPart" label="Collision Pair"/>
+<page content="com.generalrobotix.ui.view.GrxTextEditorViewPart" label="Text Editor"/>
+<page content="com.generalrobotix.ui.view.GrxOpenHRPViewPart" label="Simulation"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="4"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.5990099" ratioLeft="363" ratioRight="243" relationship="2" relative="TopLeftViews"/>
+<info folder="true" part="TopRightViews" ratio="0.34986225" ratioLeft="127" ratioRight="236" relationship="2" relative="TopLeftViews">
+<folder activePageID="com.generalrobotix.ui.view.GrxProcessManagerViewPart" appearance="2" expanded="2">
+<page content="com.generalrobotix.ui.view.GrxORBMonitorViewPart" label="NameService Monitor"/>
+<page content="com.generalrobotix.ui.view.GrxProcessManagerViewPart" label="Process Manager"/>
+<page content="com.generalrobotix.ui.view.GrxServerManagerViewPart" label="Serve Manager"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</mode>
+</grxui>
