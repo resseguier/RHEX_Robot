@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE MultiBody SYSTEM "/usr/local/share/MoGS/DTD/MoGS_Robot.dtd">
 <MultiBody scalable="no" base="free">
-<Robot_name> Hopping_Robot </Robot_name>
+<Robot_name> RHEX </Robot_name>
 <Bodies>
 	<Body>
 		<Label>MainBody</Label>
@@ -467,6 +467,58 @@
 		</Geometry>
 	</Body>	
 	
+	<Body>
+		<Label>Neck</Label>
+		<Mass unit="kg">1.375</Mass>
+		<CoM unit="m"> 0.061528 0.003448 -0.002652 </CoM>
+		<Inertia unit="kg/s2"> 0.008 0.00003429 -0.0002813 0.00003429 0.008 0.0001028 -0.0002813 0.0001028 0.0007216</Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/BoitierFixePivotZa.wrl </File>
+		</Geometry>
+	</Body>	
+					DEF B_HEAD_2 Segment {
+				      mass 1.547
+				      centerOfMass 
+				      momentsOfInertia []
+				      children [
+					  Inline { url "RHEX_cover/BoitierFixePivotYa.wrl"}
+				      ] 
+				  }
+	
+	<Body>
+		<Label>Head1</Label>
+		<Mass unit="kg">1.547</Mass>
+		<CoM unit="m"> 0.074463 0.033433 0.000963 </CoM>
+		<Inertia unit="kg/s2"> 0.009 -0.0007646 0 -0.0007646 0.002 -0.00008777 0 -0.00008777 0.01 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/BoitierFixePivotYa.wrl </File>
+		</Geometry>
+	</Body>	
+	
+	<Body>
+		<Label>Head2</Label>
+		<Mass unit="kg">0.988</Mass>
+		<CoM unit="m"> 0.000807 -0.058436 0.057551 </CoM>
+		<Inertia unit="kg/s2"> 0.005 -0.002 0.00006294 -0.002 0.006 0.000031 0.00006294 0.000031 0.004 </Inertia>
+		<Geometry>
+<!--		  <Box>
+		    <Box_X unit="m">  -0.05	0.05</Box_X>
+		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
+		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
+		  </Box>-->
+		    <File> RHEX_cover/BoitierMobilePivotYa.wrl </File>
+		</Geometry>
+	</Body>	
  </Bodies>
  <Joints>
 	<Joint type="fixed" innerId="MainBody" outerId="FrontRightShoulder1">
@@ -714,5 +766,37 @@
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
 		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
 	</Joint>	
+	
+	<Joint type="fixed" innerId="MainBody" outerId="Neck">
+		<Label>hip</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree">0.0 0.0 -0.45 -90 0 90</StaticParameters>
+	</Joint>
+
+	<Joint type="revolute" axis="z" innerId="Neck" outerId="Head1">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+
+		<Joint type="revolute" axis="z" innerId="Neck" outerId="Head1">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
+	
+	<Joint type="revolute" axis="z" innerId="Head1" outerId="Head2">
+		<Label>ankle</Label>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0.087 0 0 -90 0 0</StaticParameters>
+		<PositionMin unit="degree"> -45  </PositionMin>
+		<PositionMax unit="degree"> 45 </PositionMax>
+		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
+		<TorqueLimit unit="Nm"> 100 </TorqueLimit>
+	</Joint>
  </Joints>
 </MultiBody>

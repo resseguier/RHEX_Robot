@@ -1057,7 +1057,7 @@ humanoidBody [
 				 children [
 				DEF B_HEAD_2 Segment {
 				      mass 1.547
-				      centerOfMass 0.074463 0.033433 0.000963   # For Right component x : -0.029188 for Left 0.029188
+				      centerOfMass 0.074463 0.033433 0.000963   
 				      momentsOfInertia [0.009 -0.0007646 0 -0.0007646 0.002 -0.00008777 0 -0.00008777 0.01]
 				      children [
 					  Inline { url "RHEX_cover/BoitierFixePivotYa.wrl"}
@@ -1082,7 +1082,6 @@ humanoidBody [
 					}
 					      DEF Virtual_joint_HEAD3 Joint {
 						jointType "fixed"
-						rotation 0 0 1 -1.57
 						  children [
 						  DEF B_HEAD_3 Segment {
 							mass 0.988
