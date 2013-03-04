@@ -7,7 +7,7 @@ NavigationInfo {
 }
 Transform {
   scale 1 1 1
-  translation 0.1 -0.025 0.03
+  translation 0.1 -0.025 0.0
   rotation 0 0 1 -1.57
   children
   [

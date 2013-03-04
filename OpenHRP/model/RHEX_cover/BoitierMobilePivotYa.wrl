@@ -8,13 +8,13 @@ NavigationInfo {
 
 Transform {
   translation 0 0.03 -0.005
-  rotation 0 0 1 -1.57
+  rotation 0 1 0 -1.57
   children
   [
 
 Transform {
 
-  rotation 0 1 0 1.57
+  rotation 0 0 1 3.14
   children
   [
     Shape
