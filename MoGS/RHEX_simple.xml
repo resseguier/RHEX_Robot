@@ -529,7 +529,7 @@
 	
 	<Joint type="revolute" axis="z" innerId="FrontRightShoulder2" outerId="FrontRightShoulder3">
 		<Label>Joint_FR2</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 -90 0 0</StaticParameters>
 		<PositionMin unit="degree"> -45  </PositionMin>
 		<PositionMax unit="degree"> 45 </PositionMax>
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
@@ -570,7 +570,7 @@
 	
 	<Joint type="revolute" axis="z" innerId="MiddleRightShoulder2" outerId="MiddleRightShoulder3">
 		<Label>Joint_MR2</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 -90 0 0</StaticParameters>
 		<PositionMin unit="degree"> -45  </PositionMin>
 		<PositionMax unit="degree"> 45 </PositionMax>
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
@@ -611,7 +611,7 @@
 	
 	<Joint type="revolute" axis="z" innerId="BackRightShoulder2" outerId="BackRightShoulder3">
 		<Label>Joint_BR2</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 -90 0 0</StaticParameters>
 		<PositionMin unit="degree"> -45  </PositionMin>
 		<PositionMax unit="degree"> 45 </PositionMax>
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
@@ -652,7 +652,7 @@
 	
 	<Joint type="revolute" axis="z" innerId="FrontLeftShoulder2" outerId="FrontLeftShoulder3">
 		<Label>Joint_FL2</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 -90 0 0</StaticParameters>
 		<PositionMin unit="degree"> -45  </PositionMin>
 		<PositionMax unit="degree"> 45 </PositionMax>
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
@@ -693,7 +693,7 @@
 	
 	<Joint type="revolute" axis="z" innerId="MiddleLeftShoulder2" outerId="MiddleLeftShoulder3">
 		<Label>Joint_ML2</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 -90 0 0</StaticParameters>
 		<PositionMin unit="degree"> -45  </PositionMin>
 		<PositionMax unit="degree"> 45 </PositionMax>
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
@@ -734,7 +734,7 @@
 	
 	<Joint type="revolute" axis="z" innerId="BackLeftShoulder2" outerId="BackLeftShoulder3">
 		<Label>Joint_BL2</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 0 0 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> 0 0 0 -90 0 0</StaticParameters>
 		<PositionMin unit="degree"> -45  </PositionMin>
 		<PositionMax unit="degree"> 45 </PositionMax>
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
@@ -761,7 +761,7 @@
 	
 	<Joint type="fixed" innerId="MainBody" outerId="Neck">
 		<Label>Virtual_Neck</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree">0.0 0.0 -0.45 -90 0 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree">0 0.13 -0.45 -90 0 90</StaticParameters>
 	</Joint>
 
 	<Joint type="revolute" axis="z" innerId="Neck" outerId="Head1">
