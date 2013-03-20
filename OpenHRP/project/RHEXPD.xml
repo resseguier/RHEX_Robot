@@ -28,11 +28,11 @@
 	    <property name="outport" value="angle:JOINT_VALUE"/>
             <property name="isRobot" value="true"/>
             <property name="controller" value="RHEXPDController"/>
-            <property name="controlTime" value="0.005"/>
+            <property name="controlTime" value="0.001"/>
             <property name="setupDirectory" value="$(PROJECT_DIR)/../controller/RHEXPD"/>
             <property name="setupCommand" value="RHEXPD$(BIN_SFX)"/>
             <property name="WAIST.rotation" value="1.0 0.0 0.0 1.57 "/>
-            <property name="WAIST.translation" value="0.0 0.0 0.401 "/>
+            <property name="WAIST.translation" value="0.0 0.0 0.501 "/>
         </item>
         <item class="com.generalrobotix.ui.item.GrxCollisionPairItem" name="CP#floor#RHEX" select="true">
             <property name="objectName1" value="floor"/>

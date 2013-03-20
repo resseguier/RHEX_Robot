@@ -1036,7 +1036,8 @@ humanoidBody [
 			  rotorInertia 0.0001 # value not know through the converter
 			  children [			      
 			      DEF B_HEAD_1 Segment {
-				  mass 1.375
+# 				  mass 1.375
+				  mass 0
 				  centerOfMass 0.061528 0.003448 -0.002652
 				  momentsOfInertia [0.008 0.00003429 -0.0002813 0.00003429 0.008 0.0001028 -0.0002813 0.0001028 0.0007216]
 				  children [
@@ -1056,7 +1057,8 @@ humanoidBody [
 				  uvlimit [1000]	# upper joint velocity limit
 				 children [
 				DEF B_HEAD_2 Segment {
-				      mass 1.547
+# 				      mass 1.547
+				      mass 0
 				      centerOfMass 0.074463 0.033433 0.000963   
 				      momentsOfInertia [0.009 -0.0007646 0 -0.0007646 0.002 -0.00008777 0 -0.00008777 0.01]
 				      children [
@@ -1075,24 +1077,15 @@ humanoidBody [
 					  lvlimit [-1000]	# lower joint velocity limit
 					  uvlimit [1000]	# upper joint velocity limit
 					 children [
-					DEF Virtual_body_HEAD3 Segment {
-					      mass 0
-					      centerOfMass 0 0 0
-					      momentsOfInertia [0 0 0 0 0 0 0 0 0]
-					}
-					      DEF Virtual_joint_HEAD3 Joint {
-						jointType "fixed"
-						  children [
 						  DEF B_HEAD_3 Segment {
-							mass 0.988
-							centerOfMass 0.000807 -0.058436 0.057551
+# 							mass 0.988
+							mass 0
+							centerOfMass 0.057551 -0.058436 0.000807
 							momentsOfInertia [0.005 -0.002 0.00006294 -0.002 0.006 0.000031 0.00006294 0.000031 0.004]
 							children [
 							    Inline { url "RHEX_cover/BoitierMobilePivotYa.wrl"}
 							] 
 						    }
-									  ]
-									  }
 								]
 								}
 								]

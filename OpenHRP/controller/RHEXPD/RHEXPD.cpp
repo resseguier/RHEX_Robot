@@ -20,13 +20,13 @@
 
 #include <iostream>
 
-#define TIMESTEP 0.005
+#define TIMESTEP 0.001
 
 #define ANGLE_FILE "/tmp/RHEX.pos"
 #define VEL_FILE   "/tmp/RHEX.vel"
 // #define ACC_FILE   "etc/acc.dat"
 
-#define GAIN_FILE  "etc/PDgain.dat"
+// #define GAIN_FILE  "etc/PDgain.dat"
 
 namespace {
   const bool CONTROLLER_BRIDGE_DEBUG = false;
@@ -90,8 +90,8 @@ RHEXPD::~RHEXPD()
 {
 //    FP.close();
   closeFiles();
-  delete [] Pgain;
-  delete [] Dgain;
+//   delete [] Pgain;
+//   delete [] Dgain;
 }
 
 
@@ -110,7 +110,7 @@ RTC::ReturnCode_t RHEXPD::onInitialize()
   // Set OutPort buffer
   addOutPort("torque", m_torqueOut);
   // </rtc-template>
-
+/*
   Pgain = new double[DOF];
   Dgain = new double[DOF];
 
@@ -123,7 +123,7 @@ RTC::ReturnCode_t RHEXPD::onInitialize()
     gain.close();
   }else{
     std::cerr << GAIN_FILE << " not found" << std::endl;
-  }
+  }*/
   m_torque.data.length(DOF);
   m_angle.data.length(DOF);
 
@@ -199,22 +199,37 @@ RTC::ReturnCode_t RHEXPD::onExecute(RTC::UniqueId ec_id)
   if(!angle.eof()){
     angle >> q_ref[0]; 
     vel >> dq_ref[0];// skip time
-    for (int i=0; i<DOF-2; i++){
+    for (int i=0; i<DOF; i++){
       angle >> q_ref[i];
       vel >> dq_ref[i];
+//       q_ref[i] = 0.0;
+//       dq_ref[i] = 0.0;
+
     }
-    q_ref[DOF-2] = dq_ref[DOF-2] = 0.0;
-    q_ref[DOF-1] = dq_ref[DOF-1] = 0.0;
   }
+
 
   for(int i=0; i<DOF; i++){
     double q = m_angle.data[i];
     double dq = (q - qold[i]) / TIMESTEP;
     qold[i] = q;
     
-    error[i] = q - q_ref[i];
+    error[i] += q - q_ref[i];
     
-    double tau = -(q - q_ref[i]) * Pgain[i] - (dq - dq_ref[i]) * Dgain[i] ; //- error[i] * 100;
+
+//       std::cout<<" q_ref("<<i<<" = "<< q_ref[i] <<std::endl;
+//     double tau = -(q - q_ref[i]) * Pgain[i] - (dq - dq_ref[i]) * Dgain[i] ; //- error[i] * 100;
+//       double tau = -(q - q_ref[i]) * 40.0 - (dq - dq_ref[i]) * 20.0 ; //- error[i] * 100;
+    
+    double tau;
+    if (i < 24 )
+          tau = -(q  - q_ref[i]) * 300.0 - (dq - dq_ref[i]) * 10.0 - error[i] * 0.0;
+    else if (i > 23)
+	  tau = -(q  - q_ref[i]) * 10.0 - (dq - dq_ref[i]) * 1.0;
+    else
+	  tau = -(q  ) * 300.0 - (dq ) * 10.0 ; //- error[i] * 10;
+
+//     double tau = -(q ) * 100.0;
     
 //     if ( i %4 == 0)
 //     {
