@@ -282,7 +282,7 @@ humanoidBody [
 		  centerOfMass 0 0 0
 		  momentsOfInertia [ 0.291 0 0 0 0.362 0 0 0 0.072] # Approx
 		  children [
-		      Inline { url "RHEX_cover/Semellea.wrl"} 
+		     Inline { url "RHEX_cover/Semellea.wrl"} 
 		  ] 
 		  }
 			DEF Virtual_joint_FR_R1 Joint {
@@ -304,15 +304,15 @@ humanoidBody [
 			  rotation 0 0 1 1.57
 			  rotorInertia 0.0001 # value not know through the converter
 			  children [			      
-			      DEF Virtual_body_FR_R2 Segment {
+			      DEF FrontRightShoulder1 Segment {
 				  mass 2.453
 				  centerOfMass 0.040615 -0.000338 0.013372
 				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
 				  children [
-				      Inline { url "RHEX_cover/Epaule1Droite.wrl"}
+				     Inline { url "RHEX_cover/FrontRightShoulder1.wrl"}
 				  ] 
 				}
-				DEF J_FR_R_SH_1 Joint {
+				DEF JointFR1 Joint {
 				  jointType "rotate"
 				  jointId 0
 				  jointAxis "Z"
@@ -324,15 +324,15 @@ humanoidBody [
 				  lvlimit [-1000]	# lower joint velocity limit
 				  uvlimit [1000]	# upper joint velocity limit
 				 children [
-				DEF B_FR_RSH_1 Segment {
+				DEF FrontRightShoulder2 Segment {
 				      mass 2.539
 				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
 				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
 				      children [
-					  Inline { url "RHEX_cover/Epaule2Droite.wrl"}
+					 Inline { url "RHEX_cover/FrontRightShoulder2.wrl"}
 				      ] 
 				  }
-					DEF J_FR_R_SH_2 Joint {
+					DEF JointFR2 Joint {
 					  jointType "rotate"
 					  jointId 1
 					  jointAxis "Z"
@@ -344,20 +344,21 @@ humanoidBody [
 					  lvlimit [-1000]	# lower joint velocity limit
 					  uvlimit [1000]	# upper joint velocity limit
 					 children [
-					DEF B_FR_RSH_2 Segment {
+					DEF FrontRightShoulder3 Segment {
 					      mass 1.032
 					      centerOfMass -0.016649 0.000981 -0.073556
 					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
 					      children [
-						  Inline { url "RHEX_cover/PatteElement0a.wrl"}
+# 						 Inline { url "RHEX_cover/FrontRightShoulder3.wrl"}
+						Inline { url "RHEX_cover/PatteElement0a.wrl"}
 					      ] 
 					  }
-						DEF J_FR_R_SH_3 Joint {
+						DEF JointFR3 Joint {
 						  jointType "rotate"
 						  jointId 2
 						  jointAxis "Z"
 						  translation 0 0 0.127
-						  rotation 0 1 0 -1.57
+						  rotation 0 1 0 1.57
 
 						  rotorInertia 0.0001 # value not know through the converter
 						  llimit [-45]	# lower joint limit
@@ -365,21 +366,21 @@ humanoidBody [
 						  lvlimit [-1000]	# lower joint velocity limit
 						  uvlimit [1000]	# upper joint velocity limit
 						 children [
-						DEF B_FR_RSH_3 Segment {
+						DEF FrontRightArm Segment {
 						  mass 1.871
 						  centerOfMass 0.121884 0.000545 -0.007791
 						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
 						  children [
-						      # Inline { url "./cover/SH_3.wrl"} 
-						      Inline { url "RHEX_cover/PatteElement1a.wrl"}
+						      ## Inline { url "./cover/SH_3.wrl"} 
+						     # Inline { url "RHEX_cover/FrontRightArm.wrl"}
 						  ] 
 						  }
-							DEF J_FR_R_EL_1 Joint {
+							DEF JointFR4 Joint {
 							  jointType "rotate"
 							  jointId 3
 							  jointAxis "Z"
-							  translation 0.2 0 0
-							  rotation 0 0 1 -1.57
+							  translation -0.2 0 0
+							  rotation 0 0 1 1.57
 
 							  rotorInertia 0.0001 # value not know through the converter
 							  llimit [-45]	# lower joint limit
@@ -387,13 +388,13 @@ humanoidBody [
 							  lvlimit [-1000]	# lower joint velocity limit
 							  uvlimit [1000]	# upper joint velocity limit
 							 children [
-							DEF B_FR_REL_1 Segment {
+							DEF FrontRightForearm Segment {
 							  mass 1.287
 							  centerOfMass 0.140274 0.001512 -0.002044
 							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
 							  children [
-							      # Inline { url "./cover/EL_1.wrl"} 
-							      Inline { url "RHEX_cover/PatteElement2a.wrl"}
+							      ## Inline { url "./cover/EL_1.wrl"} 
+							     # Inline { url "RHEX_cover/PatteElement2a.wrl"}
 							  ] 
 							  }
 								]
@@ -431,7 +432,7 @@ humanoidBody [
 				  centerOfMass 0.040615 -0.000338 0.013372
 				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
 				  children [
-				      Inline { url "RHEX_cover/Epaule1Droite.wrl"}
+				     # Inline { url "RHEX_cover/FrontRightShoulder1.wrl"}
 				  ] 
 				}
 				DEF J_MID_R_SH_1 Joint {
@@ -451,7 +452,7 @@ humanoidBody [
 				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
 				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
 				      children [
-					  Inline { url "RHEX_cover/Epaule2Droite.wrl"}
+					 # Inline { url "RHEX_cover/FrontRightShoulder2.wrl"}
 				      ] 
 				  }
 					DEF J_MID_R_SH_2 Joint {
@@ -471,7 +472,7 @@ humanoidBody [
 					      centerOfMass -0.016649 0.000981 -0.073556
 					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
 					      children [
-						  Inline { url "RHEX_cover/PatteElement0a.wrl"}
+						 # Inline { url "RHEX_cover/FrontRightShoulder3.wrl"}
 					      ] 
 					  }
 						DEF J_MID_R_SH_3 Joint {
@@ -492,8 +493,8 @@ humanoidBody [
 						  centerOfMass 0.121884 0.000545 -0.007791
 						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
 						  children [
-						      # Inline { url "./cover/SH_3.wrl"} 
-						      Inline { url "RHEX_cover/PatteElement1a.wrl"}
+						      ## Inline { url "./cover/SH_3.wrl"} 
+						     # Inline { url "RHEX_cover/FrontRightArm.wrl"}
 						  ] 
 						  }
 							DEF J_MID_R_EL_1 Joint {
@@ -514,8 +515,8 @@ humanoidBody [
 							  centerOfMass 0.140274 0.001512 -0.002044
 							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
 							  children [
-							      # Inline { url "./cover/EL_1.wrl"} 
-							      Inline { url "RHEX_cover/PatteElement2a.wrl"}
+							      ## Inline { url "./cover/EL_1.wrl"} 
+							     # Inline { url "RHEX_cover/PatteElement2a.wrl"}
 							  ] 
 							  }
 								]
@@ -553,7 +554,7 @@ humanoidBody [
 				  centerOfMass 0.040615 -0.000338 0.013372
 				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
 				  children [
-				      Inline { url "RHEX_cover/Epaule1Droite.wrl"}
+				     # Inline { url "RHEX_cover/FrontRightShoulder1.wrl"}
 				  ] 
 				}
 				DEF J_BACK_R_SH_1 Joint {
@@ -573,7 +574,7 @@ humanoidBody [
 				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
 				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
 				      children [
-					  Inline { url "RHEX_cover/Epaule2Droite.wrl"}
+					 # Inline { url "RHEX_cover/FrontRightShoulder2.wrl"}
 				      ] 
 				  }
 					DEF J_BACK_R_SH_2 Joint {
@@ -593,7 +594,7 @@ humanoidBody [
 					      centerOfMass -0.016649 0.000981 -0.073556
 					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
 					      children [
-						  Inline { url "RHEX_cover/PatteElement0a.wrl"}
+						 # Inline { url "RHEX_cover/FrontRightShoulder3.wrl"}
 					      ] 
 					  }
 						DEF J_BACK_R_SH_3 Joint {
@@ -614,8 +615,8 @@ humanoidBody [
 						  centerOfMass 0.121884 0.000545 -0.007791
 						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
 						  children [
-						      # Inline { url "./cover/SH_3.wrl"} 
-						      Inline { url "RHEX_cover/PatteElement1a.wrl"}
+						      ## Inline { url "./cover/SH_3.wrl"} 
+						     # Inline { url "RHEX_cover/FrontRightArm.wrl"}
 						  ] 
 						  }
 							DEF J_BACK_R_EL_1 Joint {
@@ -636,8 +637,8 @@ humanoidBody [
 							  centerOfMass 0.140274 0.001512 -0.002044
 							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
 							  children [
-							      # Inline { url "./cover/EL_1.wrl"} 
-							      Inline { url "RHEX_cover/PatteElement2a.wrl"}
+							      ## Inline { url "./cover/EL_1.wrl"} 
+							     # Inline { url "RHEX_cover/PatteElement2a.wrl"}
 							  ] 
 							  }
 								]
@@ -675,7 +676,7 @@ humanoidBody [
 				  centerOfMass 0.040615 -0.000338 0.013372
 				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
 				  children [
-				      Inline { url "RHEX_cover/Epaule1Droite.wrl"}
+				     # Inline { url "RHEX_cover/FrontRightShoulder1.wrl"}
 				  ] 
 				}
 				DEF J_FR_L_SH_1 Joint {
@@ -695,7 +696,7 @@ humanoidBody [
 				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
 				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
 				      children [
-					  Inline { url "RHEX_cover/Epaule2Droite.wrl"}
+					 # Inline { url "RHEX_cover/FrontRightShoulder2.wrl"}
 				      ] 
 				  }
 					DEF J_FR_L_SH_2 Joint {
@@ -715,7 +716,7 @@ humanoidBody [
 					      centerOfMass -0.016649 0.000981 -0.073556
 					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
 					      children [
-						  Inline { url "RHEX_cover/PatteElement0a.wrl"}
+						 # Inline { url "RHEX_cover/FrontRightShoulder3.wrl"}
 					      ] 
 					  }
 						DEF J_FR_L_SH_3 Joint {
@@ -736,8 +737,8 @@ humanoidBody [
 						  centerOfMass 0.121884 0.000545 -0.007791
 						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
 						  children [
-						      # Inline { url "./cover/SH_3.wrl"} 
-						      Inline { url "RHEX_cover/PatteElement1a.wrl"}
+						      ## Inline { url "./cover/SH_3.wrl"} 
+						     # Inline { url "RHEX_cover/FrontRightArm.wrl"}
 						  ] 
 						  }
 							DEF J_FR_L_EL_1 Joint {
@@ -758,8 +759,8 @@ humanoidBody [
 							  centerOfMass 0.140274 0.001512 -0.002044
 							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
 							  children [
-							      # Inline { url "./cover/EL_1.wrl"} 
-							      Inline { url "RHEX_cover/PatteElement2a.wrl"}
+							      ## Inline { url "./cover/EL_1.wrl"} 
+							     # Inline { url "RHEX_cover/PatteElement2a.wrl"}
 							  ] 
 							  }
 								]
@@ -797,7 +798,7 @@ humanoidBody [
 				  centerOfMass 0.040615 -0.000338 0.013372
 				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
 				  children [
-				      Inline { url "RHEX_cover/Epaule1Droite.wrl"}
+				     # Inline { url "RHEX_cover/FrontRightShoulder1.wrl"}
 				  ] 
 				}
 				DEF J_MID_L_SH_1 Joint {
@@ -817,7 +818,7 @@ humanoidBody [
 				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
 				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
 				      children [
-					  Inline { url "RHEX_cover/Epaule2Droite.wrl"}
+					 # Inline { url "RHEX_cover/FrontRightShoulder2.wrl"}
 				      ] 
 				  }
 					DEF J_MID_L_SH_2 Joint {
@@ -837,7 +838,7 @@ humanoidBody [
 					      centerOfMass -0.016649 0.000981 -0.073556
 					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
 					      children [
-						  Inline { url "RHEX_cover/PatteElement0a.wrl"}
+						 # Inline { url "RHEX_cover/FrontRightShoulder3.wrl"}
 					      ] 
 					  }
 						DEF J_MID_L_SH_3 Joint {
@@ -858,8 +859,8 @@ humanoidBody [
 						  centerOfMass 0.121884 0.000545 -0.007791
 						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
 						  children [
-						      # Inline { url "./cover/SH_3.wrl"} 
-						      Inline { url "RHEX_cover/PatteElement1a.wrl"}
+						      ## Inline { url "./cover/SH_3.wrl"} 
+						     # Inline { url "RHEX_cover/FrontRightArm.wrl"}
 						  ] 
 						  }
 							DEF J_MID_L_EL_1 Joint {
@@ -880,8 +881,8 @@ humanoidBody [
 							  centerOfMass 0.140274 0.001512 -0.002044
 							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
 							  children [
-							      # Inline { url "./cover/EL_1.wrl"} 
-							      Inline { url "RHEX_cover/PatteElement2a.wrl"}
+							      ## Inline { url "./cover/EL_1.wrl"} 
+							     # Inline { url "RHEX_cover/PatteElement2a.wrl"}
 							  ] 
 							  }
 								]
@@ -919,7 +920,7 @@ humanoidBody [
 				  centerOfMass 0.040615 -0.000338 0.013372
 				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
 				  children [
-				      Inline { url "RHEX_cover/Epaule1Droite.wrl"}
+				     # Inline { url "RHEX_cover/FrontRightShoulder1.wrl"}
 				  ] 
 				}
 				DEF J_BACK_L_SH_1 Joint {
@@ -939,7 +940,7 @@ humanoidBody [
 				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
 				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
 				      children [
-					  Inline { url "RHEX_cover/Epaule2Droite.wrl"}
+					 # Inline { url "RHEX_cover/FrontRightShoulder2.wrl"}
 				      ] 
 				  }
 					DEF J_BACK_L_SH_2 Joint {
@@ -959,7 +960,7 @@ humanoidBody [
 					      centerOfMass -0.016649 0.000981 -0.073556
 					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
 					      children [
-						  Inline { url "RHEX_cover/PatteElement0a.wrl"}
+						 # Inline { url "RHEX_cover/FrontRightShoulder3.wrl"}
 					      ] 
 					  }
 						DEF J_BACK_L_SH_3 Joint {
@@ -980,8 +981,8 @@ humanoidBody [
 						  centerOfMass 0.121884 0.000545 -0.007791
 						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
 						  children [
-						      # Inline { url "./cover/SH_3.wrl"} 
-						      Inline { url "RHEX_cover/PatteElement1a.wrl"}
+						      ## Inline { url "./cover/SH_3.wrl"} 
+						     # Inline { url "RHEX_cover/FrontRightArm.wrl"}
 						  ] 
 						  }
 							DEF J_BACK_L_EL_1 Joint {
@@ -1002,8 +1003,8 @@ humanoidBody [
 							  centerOfMass 0.140274 0.001512 -0.002044
 							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
 							  children [
-							      # Inline { url "./cover/EL_1.wrl"} 
-							      Inline { url "RHEX_cover/PatteElement2a.wrl"}
+							      ## Inline { url "./cover/EL_1.wrl"} 
+							     # Inline { url "RHEX_cover/PatteElement2a.wrl"}
 							  ] 
 							  }
 								]
@@ -1041,7 +1042,7 @@ humanoidBody [
 				  centerOfMass 0.061528 0.003448 -0.002652
 				  momentsOfInertia [0.008 0.00003429 -0.0002813 0.00003429 0.008 0.0001028 -0.0002813 0.0001028 0.0007216]
 				  children [
-				      Inline { url "RHEX_cover/BoitierFixePivotZa.wrl"}
+				     # Inline { url "RHEX_cover/BoitierFixePivotZa.wrl"}
 				  ] 
 				}
 				DEF J_HEAD_1 Joint {
@@ -1062,7 +1063,7 @@ humanoidBody [
 				      centerOfMass 0.074463 0.033433 0.000963   
 				      momentsOfInertia [0.009 -0.0007646 0 -0.0007646 0.002 -0.00008777 0 -0.00008777 0.01]
 				      children [
-					  Inline { url "RHEX_cover/BoitierFixePivotYa.wrl"}
+					 # Inline { url "RHEX_cover/BoitierFixePivotYa.wrl"}
 				      ] 
 				  }
 					DEF J_HEAD_2 Joint {
@@ -1083,7 +1084,7 @@ humanoidBody [
 							centerOfMass 0.057551 -0.058436 0.000807
 							momentsOfInertia [0.005 -0.002 0.00006294 -0.002 0.006 0.000031 0.00006294 0.000031 0.004]
 							children [
-							    Inline { url "RHEX_cover/BoitierMobilePivotYa.wrl"}
+							   # Inline { url "RHEX_cover/BoitierMobilePivotYa.wrl"}
 							] 
 						    }
 								]
@@ -1099,10 +1100,10 @@ humanoidBody [
  ]
 joints [
 	USE WAIST,
-	USE J_FR_R_SH_1,
-	USE J_FR_R_SH_2,
-	USE J_FR_R_SH_3,
-	USE J_FR_R_EL_1,
+	USE JointFR1,
+	USE JointFR2,
+	USE JointFR3,
+	USE JointFR4,
 	USE J_MID_R_SH_1,
 	USE J_MID_R_SH_2,
 	USE J_MID_R_SH_3,
@@ -1128,10 +1129,11 @@ joints [
 ]
  segments [
 	USE main_body,
-	USE B_FR_RSH_1,
-	USE B_FR_RSH_2,
-	USE B_FR_RSH_3,
-	USE B_FR_REL_1,
+	USE FrontRightShoulder1,
+	USE FrontRightShoulder2,
+	USE FrontRightShoulder3,
+	USE FrontRightArm,
+	USE FrontRightForearm,
 	USE B_MID_RSH_1,
 	USE B_MID_RSH_2,
 	USE B_MID_RSH_3,
