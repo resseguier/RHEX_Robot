@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE MultiBody SYSTEM "/usr/local/share/MoGS/DTD/MoGS_Robot.dtd">
 <MultiBody scalable="no" base="free">
 <Robot_name> RHEX </Robot_name>
 <Bodies>
@@ -79,9 +78,9 @@
 	
 	<Body>
 		<Label>FrontRightForearm</Label>
-		<Mass unit="kg">1.871</Mass>
-		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
-		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Mass unit="kg">1.287</Mass>
+		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
+		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
 <!--		  <Box>
 		    <Box_X unit="m">  -0.05	0.05</Box_X>
@@ -154,9 +153,9 @@
 	
 	<Body>
 		<Label>MiddleRightForearm</Label>
-		<Mass unit="kg">1.871</Mass>
-		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
-		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Mass unit="kg">1.287</Mass>
+		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
+		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
 <!--		  <Box>
 		    <Box_X unit="m">  -0.05	0.05</Box_X>
@@ -229,9 +228,9 @@
 	
 	<Body>
 		<Label>BackRightForearm</Label>
-		<Mass unit="kg">1.871</Mass>
-		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
-		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Mass unit="kg">1.287</Mass>
+		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
+		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
 <!--		  <Box>
 		    <Box_X unit="m">  -0.05	0.05</Box_X>
@@ -304,9 +303,9 @@
 	
 	<Body>
 		<Label>FrontLeftForearm</Label>
-		<Mass unit="kg">1.871</Mass>
-		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
-		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Mass unit="kg">1.287</Mass>
+		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
+		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
 <!--		  <Box>
 		    <Box_X unit="m">  -0.05	0.05</Box_X>
@@ -379,9 +378,9 @@
 	
 	<Body>
 		<Label>MiddleLeftForearm</Label>
-		<Mass unit="kg">1.871</Mass>
-		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
-		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Mass unit="kg">1.287</Mass>
+		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
+		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
 <!--		  <Box>
 		    <Box_X unit="m">  -0.05	0.05</Box_X>
@@ -454,9 +453,9 @@
 	
 	<Body>
 		<Label>BackLeftForearm</Label>
-		<Mass unit="kg">1.871</Mass>
-		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
-		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01</Inertia>
+		<Mass unit="kg">1.287</Mass>
+		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
+		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
 <!--		  <Box>
 		    <Box_X unit="m">  -0.05	0.05</Box_X>
@@ -638,7 +637,7 @@
 	
 	<Joint type="fixed" innerId="MainBody" outerId="FrontLeftShoulder1">
 		<Label>Virtual_FL</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.171 0.0 -0.35 -90 180 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.171 0.0 -0.35 -90 0 -90</StaticParameters>
 	</Joint>
 
 	<Joint type="revolute" axis="z" innerId="FrontLeftShoulder1" outerId="FrontLeftShoulder2">
@@ -670,7 +669,7 @@
 	
 	<Joint type="revolute" axis="z" innerId="FrontLeftArm" outerId="FrontLeftForearm">
 		<Label>Joint_FL4</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.2 0 0 0 0 -90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.2 0 0 0 0 90</StaticParameters>
 		<PositionMin unit="degree"> -45  </PositionMin>
 		<PositionMax unit="degree"> 45 </PositionMax>
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
@@ -679,7 +678,7 @@
 	
 	<Joint type="fixed" innerId="MainBody" outerId="MiddleLeftShoulder1">
 		<Label>Virtual_ML</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.171 0 0 -90 180 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.171 0 0 -90 0 -90</StaticParameters>
 	</Joint>
 
 	<Joint type="revolute" axis="z" innerId="MiddleLeftShoulder1" outerId="MiddleLeftShoulder2">
@@ -711,7 +710,7 @@
 	
 	<Joint type="revolute" axis="z" innerId="MiddleLeftArm" outerId="MiddleLeftForearm">
 		<Label>Joint_ML4</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.2 0 0 0 0 -90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.2 0 0 0 0 90</StaticParameters>
 		<PositionMin unit="degree"> -45  </PositionMin>
 		<PositionMax unit="degree"> 45 </PositionMax>
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
@@ -720,7 +719,7 @@
 	
 	<Joint type="fixed" innerId="MainBody" outerId="BackLeftShoulder1">
 		<Label>Virtual_BL</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.171 0.0 0.35 -90 180 90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.171 0.0 0.35 -90 0 -90</StaticParameters>
 	</Joint>
 
 	<Joint type="revolute" axis="z" innerId="BackLeftShoulder1" outerId="BackLeftShoulder2">
@@ -752,7 +751,7 @@
 	
 	<Joint type="revolute" axis="z" innerId="BackLeftArm" outerId="BackLeftForearm">
 		<Label>Joint_BL4</Label>
-		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.2 0 0 0 0 -90</StaticParameters>
+		<StaticParameters unit_translation="m" unit_rotation="degree"> -0.2 0 0 0 0 90</StaticParameters>
 		<PositionMin unit="degree"> -45  </PositionMin>
 		<PositionMax unit="degree"> 45 </PositionMax>
 		<SpeedLimit unit="degree/s"> 180 </SpeedLimit>
