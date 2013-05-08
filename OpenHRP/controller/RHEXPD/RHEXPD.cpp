@@ -79,8 +79,8 @@ RHEXPD::RHEXPD(RTC::Manager* manager)
   // Set CORBA Service Ports
   
   // </rtc-template>
-  FP.open("/tmp/torque.log");
-  FPC.open("/tmp/torque_by_dq.log");
+  FP.open("/tmp/q.log");
+  FPC.open("/tmp/q_ref.log");
   count_before_start = 0;
   for(int i=0;i<DOF;i++)
 	error[i] = 0;
@@ -244,14 +244,14 @@ RTC::ReturnCode_t RHEXPD::onExecute(RTC::UniqueId ec_id)
 // 	if (tau >  12)	tau =  12;
 //     }
 //       
-    double satur = 45.0;
+    double satur = 450.0;
     
     if (tau < -satur)	tau = -satur;
     if (tau >  satur)	tau =  satur;
     
     m_torque.data[i] = tau;
-    FPC<<  tau * dq<<" ";    
-    FP<<  tau<<" ";
+    FP<<  q<<" ";    
+    FPC<<  q_ref[i]<<" ";
   }
   FP<<std::endl;
   FPC<<std::endl;

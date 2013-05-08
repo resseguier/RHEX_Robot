@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MultiBody scalable="no" base="free">
-<Robot_name> RHEX </Robot_name>
+<Robot_type> RHEX </Robot_type>
 <Bodies>
 	<Body>
 		<Label>MainBody</Label>
@@ -8,12 +8,12 @@
 		<CoM unit="m"> 0.0 0.0 0.0</CoM>
 		<Inertia unit="kg/s2"> 0.291 0.0 0.0 0.0 0.362 0.0 0.0 0.0 0.72 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m"> -0.1	0.1</Box_X>
-		    <Box_Y unit="m"> -0.1	0.1</Box_Y>
-		    <Box_Z unit="m"> -0.1	0.1</Box_Z>
-		  </Box>-->
-		  <File> RHEX_cover/Semellea.wrl </File>
+		  <Box>
+		    <Box_X unit="m"> -0.2	0.2</Box_X>
+		    <Box_Y unit="m"> -0.01	0.01</Box_Y>
+		    <Box_Z unit="m"> -0.4	0.4</Box_Z>
+		  </Box>
+<!-- 		  <File> RHEX_cover/Semellea.wrl </File> -->
 		</Geometry>
 	</Body>
 	<Body>
@@ -22,12 +22,12 @@
 		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
 		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
 		<Geometry>
-<!--		  <Box>
+		  <Box>
 		    <Box_X unit="m">  0.0	0.2</Box_X>
 		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
 		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/Epaule1Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -37,12 +37,7 @@
 		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
 		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  0.0	0.2</Box_X>
-		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		   <!-- 		  <File> RHEX_cover/Epaule2Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -52,12 +47,7 @@
 		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
 		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		   <!-- 		  <File> RHEX_cover/PatteElement0a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -67,12 +57,12 @@
 		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
 		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.2	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -82,12 +72,12 @@
 		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
 		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.4	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -97,12 +87,12 @@
 		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
 		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
 		<Geometry>
-<!--		  <Box>
+		  <Box>
 		    <Box_X unit="m">  0.0	0.2</Box_X>
 		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
 		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/Epaule1Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -112,12 +102,7 @@
 		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
 		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  0.0	0.2</Box_X>
-		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		   <!-- 		  <File> RHEX_cover/Epaule2Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -127,12 +112,7 @@
 		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
 		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		   <!-- 		  <File> RHEX_cover/PatteElement0a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -142,12 +122,12 @@
 		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
 		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.2	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -157,12 +137,12 @@
 		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
 		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.4	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -172,12 +152,12 @@
 		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
 		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
 		<Geometry>
-<!--		  <Box>
+		  <Box>
 		    <Box_X unit="m">  0.0	0.2</Box_X>
 		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
 		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/Epaule1Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -187,12 +167,7 @@
 		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
 		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  0.0	0.2</Box_X>
-		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		   <!-- 		  <File> RHEX_cover/Epaule2Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -202,12 +177,7 @@
 		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
 		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		   <!-- 		  <File> RHEX_cover/PatteElement0a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -217,12 +187,12 @@
 		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
 		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.2	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -232,12 +202,12 @@
 		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
 		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.4	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		</Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -247,12 +217,12 @@
 		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
 		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
 		<Geometry>
-<!--		  <Box>
+		  <Box>
 		    <Box_X unit="m">  0.0	0.2</Box_X>
 		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
 		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/Epaule1Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -262,12 +232,7 @@
 		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
 		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  0.0	0.2</Box_X>
-		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		   <!-- 		  <File> RHEX_cover/Epaule2Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -277,12 +242,7 @@
 		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
 		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		<!-- 		  <File> RHEX_cover/PatteElement0a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -292,12 +252,12 @@
 		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
 		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.2	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -307,12 +267,12 @@
 		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
 		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.4	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -322,12 +282,12 @@
 		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
 		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
 		<Geometry>
-<!--		  <Box>
+		  <Box>
 		    <Box_X unit="m">  0.0	0.2</Box_X>
 		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
 		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/Epaule1Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -337,12 +297,7 @@
 		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
 		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  0.0	0.2</Box_X>
-		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		   <!-- 		  <File> RHEX_cover/Epaule2Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -352,12 +307,7 @@
 		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
 		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		   <!-- 		  <File> RHEX_cover/PatteElement0a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -367,12 +317,12 @@
 		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
 		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.2	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -382,12 +332,12 @@
 		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
 		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.4	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -397,12 +347,12 @@
 		<CoM unit="m"> 0.040615 -0.000338 0.013372 </CoM>
 		<Inertia unit="kg/s2"> 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019 </Inertia>
 		<Geometry>
-<!--		  <Box>
+		  <Box>
 		    <Box_X unit="m">  0.0	0.2</Box_X>
 		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
 		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule1Droite.wrl </File>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/Epaule1Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -412,12 +362,7 @@
 		<CoM unit="m"> -0.029188 0.028369 -0.005857 </CoM>  <!--For Right component x : -0.029188 for Left 0.029188-->
 		<Inertia unit="kg/s2"> 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  0.0	0.2</Box_X>
-		    <Box_Y unit="m"> -0.025	0.025</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/Epaule2Droite.wrl </File>
+		   <!-- 		  <File> RHEX_cover/Epaule2Droite.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -427,12 +372,7 @@
 		<CoM unit="m"> -0.016649 0.000981 -0.073556 </CoM>
 		<Inertia unit="kg/s2"> 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement0a.wrl </File>
+		   <!-- 		  <File> RHEX_cover/PatteElement0a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -442,12 +382,12 @@
 		<CoM unit="m"> 0.121884 0.000545 -0.007791 </CoM>
 		<Inertia unit="kg/s2"> 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.2	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -457,12 +397,12 @@
 		<CoM unit="m"> 0.140274 0.001512 -0.002044 </CoM>
 		<Inertia unit="kg/s2"> 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008</Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/PatteElement1a.wrl </File>
+		  <Box>
+		    <Box_X unit="m">  -0.4	0.0</Box_X>
+		    <Box_Y unit="m"> -0.045	0.045</Box_Y>
+		    <Box_Z unit="m"> -0.055	0.055</Box_Z>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/PatteElement1a.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -472,12 +412,12 @@
 		<CoM unit="m"> 0.061528 0.003448 -0.002652 </CoM>
 		<Inertia unit="kg/s2"> 0.008 0.00003429 -0.0002813 0.00003429 0.008 0.0001028 -0.0002813 0.0001028 0.0007216</Inertia>
 		<Geometry>
-<!--		  <Box>
+		  <Box>
 		    <Box_X unit="m">  -0.05	0.05</Box_X>
 		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
 		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/BoitierFixePivotZa.wrl </File>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/BoitierFixePivotZa.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -487,12 +427,7 @@
 		<CoM unit="m"> 0.074463 0.033433 0.000963 </CoM>
 		<Inertia unit="kg/s2"> 0.009 -0.0007646 0 -0.0007646 0.002 -0.00008777 0 -0.00008777 0.01 </Inertia>
 		<Geometry>
-<!--		  <Box>
-		    <Box_X unit="m">  -0.05	0.05</Box_X>
-		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
-		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/BoitierFixePivotYa.wrl </File>
+		   <!-- 		  <File> RHEX_cover/BoitierFixePivotYa.wrl </File> -->
 		</Geometry>
 	</Body>	
 	
@@ -502,12 +437,12 @@
 		<CoM unit="m"> 0.000807 -0.058436 0.057551 </CoM>
 		<Inertia unit="kg/s2"> 0.005 -0.002 0.00006294 -0.002 0.006 0.000031 0.00006294 0.000031 0.004 </Inertia>
 		<Geometry>
-<!--		  <Box>
+		  <Box>
 		    <Box_X unit="m">  -0.05	0.05</Box_X>
 		    <Box_Y unit="m"> -0.05	0.0</Box_Y>
 		    <Box_Z unit="m"> -0.05	0.05</Box_Z>
-		  </Box>-->
-		    <File> RHEX_cover/BoitierMobilePivotYa.wrl </File>
+		  </Box>
+		   <!-- 		  <File> RHEX_cover/BoitierMobilePivotYa.wrl </File> -->
 		</Geometry>
 	</Body>	
  </Bodies>
