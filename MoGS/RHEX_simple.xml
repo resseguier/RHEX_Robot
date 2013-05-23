@@ -423,7 +423,7 @@
 	
 	<Body>
 		<Label>Head1</Label>
-		<Mass unit="kg">1.547</Mass>
+		<Mass unit="kg">1.535</Mass>
 		<CoM unit="m"> 0.074463 0.033433 0.000963 </CoM>
 		<Inertia unit="kg/s2"> 0.009 -0.0007646 0 -0.0007646 0.002 -0.00008777 0 -0.00008777 0.01 </Inertia>
 		<Geometry>
@@ -433,7 +433,7 @@
 	
 	<Body>
 		<Label>Head2</Label>
-		<Mass unit="kg">0.988</Mass>
+		<Mass unit="kg">1.045</Mass>
 		<CoM unit="m"> 0.000807 -0.058436 0.057551 </CoM>
 		<Inertia unit="kg/s2"> 0.005 -0.002 0.00006294 -0.002 0.006 0.000031 0.00006294 0.000031 0.004 </Inertia>
 		<Geometry>

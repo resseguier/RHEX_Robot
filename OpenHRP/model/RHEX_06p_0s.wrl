@@ -1,0 +1,1156 @@
+#VRML V2.0 utf8 
+
+# This file is automatically converted from proto_rhex xml files
+
+PROTO Joint [
+ exposedField     SFVec3f      center              0 0 0
+ exposedField     MFNode       children            []
+ exposedField     MFFloat      llimit              []
+ exposedField     MFFloat      lvlimit             []
+ exposedField     SFRotation   limitOrientation    0 0 1 0
+ exposedField     SFString     name                ""
+ exposedField     SFRotation   rotation            0 0 1 0
+ exposedField     SFVec3f      scale               1 1 1
+ exposedField     SFRotation   scaleOrientation    0 0 1 0
+ exposedField     MFFloat      stiffness           [ 0 0 0 ]
+ exposedField     SFVec3f      translation         0 0 0
+ exposedField     MFFloat      ulimit              []
+ exposedField     MFFloat      uvlimit              []
+ exposedField     SFString     jointType           ""
+ exposedField     SFInt32      jointId             -1
+ exposedField     SFString     jointAxis           "Z"
+ 
+ exposedField     SFFloat      gearRatio           1
+ exposedField     SFFloat      gearEfficiency      1
+ exposedField     SFFloat      rotorInertia        0
+ exposedField     SFFloat      rotorResistor       0
+ exposedField     SFFloat      torqueConst         1
+ exposedField     SFFloat      encoderPulse        1
+]
+{
+  Transform {
+    center           IS center
+    children         IS children
+    rotation         IS rotation
+    scale            IS scale
+    scaleOrientation IS scaleOrientation
+    translation      IS translation
+  }
+}
+PROTO Segment [
+ field           SFVec3f     bboxCenter        0 0 0
+ field           SFVec3f     bboxSize          -1 -1 -1
+ exposedField    SFVec3f     centerOfMass      0 0 0
+ exposedField    MFNode      children          [ ]
+ exposedField    SFNode      coord             NULL
+ exposedField    MFNode      displacers        [ ]
+ exposedField    SFFloat     mass              0
+ exposedField    MFFloat     momentsOfInertia  [ 0 0 0 0 0 0 0 0 0 ]
+ exposedField    SFString    name              ""
+ eventIn         MFNode      addChildren
+ eventIn         MFNode      removeChildren
+]
+{
+  Group {
+    addChildren    IS addChildren
+    bboxCenter     IS bboxCenter
+    bboxSize       IS bboxSize
+    children       IS children
+    removeChildren IS removeChildren
+  }
+}
+PROTO Humanoid [
+ field           SFVec3f    bboxCenter            0 0 0
+ field           SFVec3f    bboxSize              -1 -1 -1
+ exposedField    SFVec3f    center                0 0 0
+ exposedField    MFNode     humanoidBody          [ ]
+ exposedField    MFString   info                  [ ]
+ exposedField    MFNode     joints                [ ]
+ exposedField    SFString   name                  ""
+ exposedField    SFRotation rotation              0 0 1 0
+ exposedField    SFVec3f    scale                 1 1 1
+ exposedField    SFRotation scaleOrientation      0 0 1 0
+ exposedField    MFNode     segments              [ ]
+ exposedField    MFNode     sites                 [ ]
+ exposedField    SFVec3f    translation           0 0 0
+ exposedField    SFString   version               "1.1"
+ exposedField    MFNode     viewpoints            [ ]
+]
+{
+  Transform {
+    bboxCenter       IS bboxCenter
+    bboxSize         IS bboxSize
+    center           IS center
+    rotation         IS rotation
+    scale            IS scale
+    scaleOrientation IS scaleOrientation
+    translation      IS translation
+  children [
+     Group {
+       children IS viewpoints
+     }
+     Group {
+       children IS humanoidBody
+     }
+    ]
+  }
+}
+PROTO VisionSensor [
+ exposedField SFVec3f    translation       0 0 0
+ exposedField SFRotation rotation              0 0 1 0
+ 
+ exposedField SFFloat    fieldOfView       0.785398
+ exposedField SFString   name              ""
+ exposedField SFFloat    frontClipDistance 0.01
+ exposedField SFFloat    backClipDistance  10.0
+ exposedField SFString   type              "NONE"
+ exposedField SFInt32    sensorId          -1
+ exposedField SFInt32    width             320  
+ exposedField SFInt32    height            240  
+ 
+]
+{
+  Transform {
+    rotation         IS rotation
+    translation      IS translation
+    
+  }
+}
+PROTO ForceSensor [
+ exposedField SFVec3f maxForce -1 -1 -1
+ exposedField SFVec3f maxTorque -1 -1 -1
+ exposedField SFVec3f translation 0 0 0
+ exposedField SFRotation rotation 0 0 1 0
+ exposedField SFInt32 sensorId -1
+]
+{
+  Transform {
+    translation IS translation
+    rotation IS rotation
+  }
+}
+PROTO Gyro [
+ exposedField SFVec3f maxAngularVelocity -1 -1 -1
+ exposedField SFVec3f translation 0 0 0
+ exposedField SFRotation rotation 0 0 1 0
+ exposedField SFInt32 sensorId -1
+]
+{
+  Transform {
+    translation IS translation
+    rotation IS rotation
+  }
+}
+PROTO AccelerationSensor [
+ exposedField SFVec3f maxAcceleration -1 -1 -1
+ exposedField SFVec3f translation 0 0 0
+ exposedField SFRotation rotation 0 0 1 0
+ exposedField SFInt32 sensorId -1
+]
+{
+  Transform {
+    translation IS translation
+    rotation IS rotation
+  }
+}
+PROTO PressureSensor [
+ exposedField SFFloat maxPressure -1
+ exposedField SFVec3f translation 0 0 0
+ exposedField SFRotation rotation 0 0 1 0
+ exposedField SFInt32 sensorId -1
+]
+{
+  Transform {
+    translation IS translation
+    rotation IS rotation
+  }
+}
+PROTO PhotoInterrupter [
+ exposedField SFVec3f transmitter 0 0 0
+ exposedField SFVec3f receiver 0 0 0
+ exposedField SFInt32 sensorId -1
+]
+{
+  Transform{
+  children [
+     Transform{
+       translation IS transmitter
+     }
+     Transform{
+       translation IS receiver
+     }
+    ]
+  }
+}
+PROTO CylinderSensorZ [
+ exposedField    SFFloat    maxAngle            -1
+ exposedField    SFFloat    minAngle        0
+ exposedField    MFNode     children        [ ]
+]
+{
+  Transform{
+    rotation 1 0 0 1.5708
+  children [
+     DEF SensorY CylinderSensor{
+       maxAngle IS maxAngle
+       minAngle IS minAngle
+     }
+     DEF AxisY Transform{
+     children [
+        Transform{
+          rotation 1 0 0 -1.5708
+          children IS children
+        }
+       ]
+     }
+    ]
+  }
+  ROUTE SensorY.rotation_changed TO AxisY.set_rotation
+}
+PROTO CylinderSensorY [
+ exposedField    SFFloat    maxAngle            -1
+ exposedField    SFFloat    minAngle        0
+ exposedField    MFNode     children        [ ]
+]
+{
+  Transform{
+    rotation 0 1 0 1.5708
+  children [
+     DEF SensorX CylinderSensor{
+       maxAngle IS maxAngle
+       minAngle IS minAngle
+     }
+     DEF AxisX Transform{
+     children [
+        Transform{
+          rotation 0 1 0 -1.5708
+          children IS children
+        }
+       ]
+     }
+    ]
+  }
+  ROUTE SensorX.rotation_changed TO AxisX.set_rotation
+}
+PROTO CylinderSensorX [
+ exposedField    SFFloat    maxAngle            -1
+ exposedField    SFFloat    minAngle        0
+ exposedField    MFNode     children        [ ]
+]
+{
+  Transform{
+    rotation 0 0 1 -1.5708
+  children [
+     DEF SensorZ CylinderSensor{
+       maxAngle IS maxAngle
+       minAngle IS minAngle
+     }
+     DEF AxisZ Transform{
+     children [
+        Transform{
+          rotation 0 0 1 1.5708
+          children IS children
+        }
+       ]
+     }
+    ]
+  }
+  ROUTE SensorZ.rotation_changed TO AxisZ.set_rotation
+}
+NavigationInfo {
+  avatarSize    0.5
+  headlight     TRUE
+  type  ["EXAMINE", "ANY"]
+}
+Background {
+  
+  skyColor 0.4 0.6 0.4
+}
+Viewpoint {
+  position    3 0 0.835
+  orientation 0.5770 0.5775 0.5775 2.0935
+}
+DEF RHEX Humanoid {
+humanoidBody [
+	DEF WAIST Joint {
+		jointType "free"
+		translation 0 0 0.5 
+		rotation 0 0 1 0
+	children [	
+		DEF main_body Segment {
+		  mass 3.174
+		  centerOfMass 0 0 0
+		  momentsOfInertia [ 0.291 0 0 0 0.362 0 0 0 0.072] # Approx
+		  children [
+		     Inline { url "RHEX_cover/Semellea.wrl"} 
+		  ] 
+		  }
+			DEF Virtual_joint_FR_R1 Joint {
+			  jointType "fixed"
+			  translation 0.171 0.0 -0.35
+			  rotation 1 0 0 -1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [
+			DEF Virtual_body_FR_R1 Segment {
+			  mass 0.0
+			  centerOfMass 0 0 0
+			  momentsOfInertia [ 0 0 0 0 0 0 0 0 0] # Approx
+
+			  }
+
+			DEF Virtual_joint_FR_R2 Joint {
+			  jointType "fixed"
+			  translation 0 0 -0.07
+			  rotation 0 0 1 1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [			      
+			      DEF FrontRightShoulder1 Segment {
+				  mass 2.453
+				  centerOfMass 0.040615 -0.000338 0.013372
+				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
+				  children [
+				     Inline { url "RHEX_cover/RightShoulder1.wrl"}
+				  ] 
+				}
+				DEF JointFR1 Joint {
+				  jointType "rotate"
+				  jointId 0
+				  jointAxis "Z"
+				  translation 0 0 0
+				  rotation 0 0 1 0
+				  rotorInertia 0.0001 # value not know through the converter
+				  llimit [-45]	# lower joint limit
+				  ulimit [45]	# upper joint limit
+				  lvlimit [-1000]	# lower joint velocity limit
+				  uvlimit [1000]	# upper joint velocity limit
+				 children [
+				DEF FrontRightShoulder2 Segment {
+				      mass 2.539
+				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
+				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
+				      children [
+					 Inline { url "RHEX_cover/RightShoulder2.wrl"}
+				      ] 
+				  }
+					DEF JointFR2 Joint {
+					  jointType "rotate"
+					  jointId 1
+					  jointAxis "Z"
+					  translation 0 0 0.0
+					  rotation 1 0 0 1.57
+					  rotorInertia 0.0001 # value not know through the converter
+					  llimit [-45]	# lower joint limit
+					  ulimit [45]	# upper joint limit
+					  lvlimit [-1000]	# lower joint velocity limit
+					  uvlimit [1000]	# upper joint velocity limit
+					 children [
+					DEF FrontRightShoulder3 Segment {
+					      mass 1.032
+					      centerOfMass -0.016649 0.000981 -0.073556
+					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
+					      children [
+						 Inline { url "RHEX_cover/RightShoulder3.wrl"}
+					      ] 
+					  }
+						DEF JointFR3 Joint {
+						  jointType "rotate"
+						  jointId 2
+						  jointAxis "Z"
+						  translation 0 0 0.127
+						  rotation 0 1 0 1.57
+
+						  rotorInertia 0.0001 # value not know through the converter
+						  llimit [-45]	# lower joint limit
+						  ulimit [45]	# upper joint limit
+						  lvlimit [-1000]	# lower joint velocity limit
+						  uvlimit [1000]	# upper joint velocity limit
+						 children [
+						DEF FrontRightArm Segment {
+						  mass 1.871
+						  centerOfMass 0.121884 0.000545 -0.007791
+						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
+						  children [
+						     Inline { url "RHEX_cover/RightArm.wrl"}
+						  ] 
+						  }
+							DEF JointFR4 Joint {
+							  jointType "rotate"
+							  jointId 3
+							  jointAxis "Z"
+							  translation -0.2 0 0
+							  rotation 0 0 1 1.57
+
+							  rotorInertia 0.0001 # value not know through the converter
+							  llimit [-45]	# lower joint limit
+							  ulimit [45]	# upper joint limit
+							  lvlimit [-1000]	# lower joint velocity limit
+							  uvlimit [1000]	# upper joint velocity limit
+							 children [
+							DEF FrontRightForearm Segment {
+							  mass 1.887
+							  centerOfMass 0.140274 0.001512 -0.002044
+							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
+							  children [
+							     Inline { url "RHEX_cover/RightForearm.wrl"}
+							  ] 
+							  }
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+			}
+			]
+			}
+			DEF Virtual_joint_MID_R1 Joint {
+			  jointType "fixed"
+			  translation 0.171 0.0 0
+			  rotation 1 0 0 -1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [
+			DEF Virtual_body_MID_R1 Segment {
+			  mass 0.0
+			  centerOfMass 0 0 0
+			  momentsOfInertia [ 0 0 0 0 0 0 0 0 0] # Approx
+		  }
+
+			DEF MiddleRightShoulder1 Joint {
+			  jointType "fixed"
+			  translation 0 0 -0.07
+			  rotation 0 0 1 1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [			      
+			      DEF Virtual_body_MID_R2 Segment {
+				  mass 2.453
+				  centerOfMass 0.040615 -0.000338 0.013372
+				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
+				  children [
+				     Inline { url "RHEX_cover/RightShoulder1.wrl"}
+				  ] 
+				}
+				DEF JointMR1 Joint {
+				  jointType "rotate"
+				  jointId 4
+				  jointAxis "Z"
+				  translation 0 0 0
+				  rotation 0 0 1 0
+				  rotorInertia 0.0001 # value not know through the converter
+				  llimit [-45]	# lower joint limit
+				  ulimit [45]	# upper joint limit
+				  lvlimit [-1000]	# lower joint velocity limit
+				  uvlimit [1000]	# upper joint velocity limit
+				 children [
+				DEF MiddleRightShoulder2 Segment {
+				      mass 2.539
+				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
+				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
+				      children [
+					 Inline { url "RHEX_cover/RightShoulder2.wrl"}
+				      ] 
+				  }
+					DEF JointMR2 Joint {
+					  jointType "rotate"
+					  jointId 5
+					  jointAxis "Z"
+					  translation 0 0 0.0
+					  rotation 1 0 0 1.57
+					  rotorInertia 0.0001 # value not know through the converter
+					  llimit [-45]	# lower joint limit
+					  ulimit [45]	# upper joint limit
+					  lvlimit [-1000]	# lower joint velocity limit
+					  uvlimit [1000]	# upper joint velocity limit
+					 children [
+					DEF MiddleRightShoulder3 Segment {
+					      mass 1.032
+					      centerOfMass -0.016649 0.000981 -0.073556
+					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
+					      children [
+						 Inline { url "RHEX_cover/RightShoulder3.wrl"}
+					      ] 
+					  }
+						DEF JointMR3 Joint {
+						  jointType "rotate"
+						  jointId 6
+						  jointAxis "Z"
+						  translation 0 0 0.127
+						  rotation 0 1 0 1.57
+
+						  rotorInertia 0.0001 # value not know through the converter
+						  llimit [-45]	# lower joint limit
+						  ulimit [45]	# upper joint limit
+						  lvlimit [-1000]	# lower joint velocity limit
+						  uvlimit [1000]	# upper joint velocity limit
+						 children [
+						DEF MiddleRightArm Segment {
+						  mass 1.871
+						  centerOfMass 0.121884 0.000545 -0.007791
+						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
+						  children [
+						     Inline { url "RHEX_cover/RightArm.wrl"}
+						  ] 
+						  }
+							DEF JointMR4 Joint {
+							  jointType "rotate"
+							  jointId 7
+							  jointAxis "Z"
+							  translation -0.2 0 0
+							  rotation 0 0 1 1.57
+
+							  rotorInertia 0.0001 # value not know through the converter
+							  llimit [-45]	# lower joint limit
+							  ulimit [45]	# upper joint limit
+							  lvlimit [-1000]	# lower joint velocity limit
+							  uvlimit [1000]	# upper joint velocity limit
+							 children [
+							DEF MiddleRightForearm Segment {
+							  mass 1.887
+							  centerOfMass 0.140274 0.001512 -0.002044
+							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
+							  children [
+							     Inline { url "RHEX_cover/RightForearm.wrl"}
+							  ] 
+							  }
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+			}
+			]
+			}
+			DEF Virtual_joint_BACK_R1 Joint {
+			  jointType "fixed"
+			  translation 0.171 0.0 0.35
+			  rotation 1 0 0 -1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [
+			DEF Virtual_body_BACK_R1 Segment {
+			  mass 0.0
+			  centerOfMass 0 0 0
+			  momentsOfInertia [ 0 0 0 0 0 0 0 0 0] # Approx
+			  }
+
+			DEF Virtual_joint_BACK_R2 Joint {
+			  jointType "fixed"
+			  translation 0 0 -0.07
+			  rotation 0 0 1 1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [			      
+			      DEF BackRightShoulder1 Segment {
+				  mass 2.453
+				  centerOfMass 0.040615 -0.000338 0.013372
+				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
+				  children [
+				     Inline { url "RHEX_cover/RightShoulder1.wrl"}
+				  ] 
+				}
+				DEF JointBR1 Joint {
+				  jointType "rotate"
+				  jointId 8
+				  jointAxis "Z"
+				  translation 0 0 0
+				  rotation 0 0 1 0
+				  rotorInertia 0.0001 # value not know through the converter
+				  llimit [-45]	# lower joint limit
+				  ulimit [45]	# upper joint limit
+				  lvlimit [-1000]	# lower joint velocity limit
+				  uvlimit [1000]	# upper joint velocity limit
+				 children [
+				DEF BackRightShoulder2 Segment {
+				      mass 2.539
+				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
+				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
+				      children [
+					 Inline { url "RHEX_cover/RightShoulder2.wrl"}
+				      ] 
+				  }
+					DEF JointBR2 Joint {
+					  jointType "rotate"
+					  jointId 9
+					  jointAxis "Z"
+					  translation 0 0 0.0
+					  rotation 1 0 0 1.57
+					  rotorInertia 0.0001 # value not know through the converter
+					  llimit [-45]	# lower joint limit
+					  ulimit [45]	# upper joint limit
+					  lvlimit [-1000]	# lower joint velocity limit
+					  uvlimit [1000]	# upper joint velocity limit
+					 children [
+					DEF BackRightShoulder3 Segment {
+					      mass 1.032
+					      centerOfMass -0.016649 0.000981 -0.073556
+					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
+					      children [
+						 Inline { url "RHEX_cover/RightShoulder3.wrl"}
+					      ] 
+					  }
+						DEF JointBR3 Joint {
+						  jointType "rotate"
+						  jointId 10
+						  jointAxis "Z"
+						  translation 0 0 0.127
+						  rotation 0 1 0 1.57
+
+						  rotorInertia 0.0001 # value not know through the converter
+						  llimit [-45]	# lower joint limit
+						  ulimit [45]	# upper joint limit
+						  lvlimit [-1000]	# lower joint velocity limit
+						  uvlimit [1000]	# upper joint velocity limit
+						 children [
+						DEF BackRightArm Segment {
+						  mass 1.871
+						  centerOfMass 0.121884 0.000545 -0.007791
+						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
+						  children [
+						     Inline { url "RHEX_cover/RightArm.wrl"}
+						  ] 
+						  }
+							DEF JointBR4 Joint {
+							  jointType "rotate"
+							  jointId 11
+							  jointAxis "Z"
+							  translation -0.2 0 0
+							  rotation 0 0 1 1.57
+
+							  rotorInertia 0.0001 # value not know through the converter
+							  llimit [-45]	# lower joint limit
+							  ulimit [45]	# upper joint limit
+							  lvlimit [-1000]	# lower joint velocity limit
+							  uvlimit [1000]	# upper joint velocity limit
+							 children [
+							DEF BackRightForearm Segment {
+							  mass 1.887
+							  centerOfMass 0.140274 0.001512 -0.002044
+							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
+							  children [
+							     Inline { url "RHEX_cover/RightForearm.wrl"}
+							  ] 
+							  }
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+			}
+			]
+			}
+			DEF Virtual_joint_FR_L1 Joint {
+			  jointType "fixed"
+			  translation -0.171 0.0 -0.35
+			  rotation 1 0 0 -1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [
+			DEF Virtual_body_FR_L1 Segment {
+			  mass 0.0
+			  centerOfMass 0 0 0
+			  momentsOfInertia [ 0 0 0 0 0 0 0 0 0] # Approx
+			  }
+
+			DEF Virtual_joint_FR_L2 Joint {
+			  jointType "fixed"
+			  translation 0 0 -0.07
+			  rotation 0 0 1 -1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [			      
+			      DEF FrontLeftShoulder1 Segment {
+				  mass 2.453
+				  centerOfMass 0.040615 -0.000338 0.013372
+				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
+				  children [
+				     Inline { url "RHEX_cover/LeftShoulder1.wrl"}
+				  ] 
+				}
+				DEF JointFL1 Joint {
+				  jointType "rotate"
+				  jointId 12
+				  jointAxis "Z"
+				  translation 0 0 0
+				  rotation 0 0 1 0
+				  rotorInertia 0.0001 # value not know through the converter
+				  llimit [-45]	# lower joint limit
+				  ulimit [45]	# upper joint limit
+				  lvlimit [-1000]	# lower joint velocity limit
+				  uvlimit [1000]	# upper joint velocity limit
+				 children [
+				DEF FrontLeftShoulder2 Segment {
+				      mass 2.539
+				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
+				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
+				      children [
+					 Inline { url "RHEX_cover/LeftShoulder2.wrl"}
+				      ] 
+				  }
+					DEF JointFL2 Joint {
+					  jointType "rotate"
+					  jointId 13
+					  jointAxis "Z"
+					  translation 0 0 0.0
+					  rotation 1 0 0 1.57
+					  rotorInertia 0.0001 # value not know through the converter
+					  llimit [-45]	# lower joint limit
+					  ulimit [45]	# upper joint limit
+					  lvlimit [-1000]	# lower joint velocity limit
+					  uvlimit [1000]	# upper joint velocity limit
+					 children [
+					DEF FrontLeftShoulder3 Segment {
+					      mass 1.032
+					      centerOfMass -0.016649 0.000981 -0.073556
+					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
+					      children [
+						 Inline { url "RHEX_cover/RightShoulder3.wrl"}
+					      ] 
+					  }
+						DEF JointFL3 Joint {
+						  jointType "rotate"
+						  jointId 14
+						  jointAxis "Z"
+						  translation 0 0 0.127
+						  rotation 0 1 0 1.57
+
+						  rotorInertia 0.0001 # value not know through the converter
+						  llimit [-45]	# lower joint limit
+						  ulimit [45]	# upper joint limit
+						  lvlimit [-1000]	# lower joint velocity limit
+						  uvlimit [1000]	# upper joint velocity limit
+						 children [
+						DEF FrontLeftArm Segment {
+						  mass 1.871
+						  centerOfMass 0.121884 0.000545 -0.007791
+						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
+						  children [
+						     Inline { url "RHEX_cover/LeftArm.wrl"}
+						  ] 
+						  }
+							DEF JointFL4 Joint {
+							  jointType "rotate"
+							  jointId 15
+							  jointAxis "Z"
+							  translation -0.2 0 0
+							  rotation 0 0 1 1.57
+
+							  rotorInertia 0.0001 # value not know through the converter
+							  llimit [-45]	# lower joint limit
+							  ulimit [45]	# upper joint limit
+							  lvlimit [-1000]	# lower joint velocity limit
+							  uvlimit [1000]	# upper joint velocity limit
+							 children [
+							DEF FrontLeftForearm Segment {
+							  mass 1.887
+							  centerOfMass 0.140274 0.001512 -0.002044
+							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
+							  children [
+							     Inline { url "RHEX_cover/LeftForearm.wrl"}
+							  ] 
+							  }
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+			}
+			]
+			}
+
+			DEF Virtual_joint_MID_L1 Joint {
+			  jointType "fixed"
+			  translation -0.171 0.0 0.0 
+			  rotation 1 0 0 -1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [
+			DEF Virtual_body_MID_L1 Segment {
+			  mass 0.0
+			  centerOfMass 0 0 0
+			  momentsOfInertia [ 0 0 0 0 0 0 0 0 0] # Approx
+			  }
+
+			DEF Virtual_joint_MID_L2 Joint {
+			  jointType "fixed"
+			  translation 0 0 -0.07
+			  rotation 0 0 1 -1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [			      
+			      DEF MiddleLeftShoulder1 Segment {
+				  mass 2.453
+				  centerOfMass 0.040615 -0.000338 0.013372
+				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
+				  children [
+				     Inline { url "RHEX_cover/LeftShoulder1.wrl"}
+				  ] 
+				}
+				DEF JointML1 Joint {
+				  jointType "rotate"
+				  jointId 16
+				  jointAxis "Z"
+				  translation 0 0 0
+				  rotation 0 0 1 0
+				  rotorInertia 0.0001 # value not know through the converter
+				  llimit [-45]	# lower joint limit
+				  ulimit [45]	# upper joint limit
+				  lvlimit [-1000]	# lower joint velocity limit
+				  uvlimit [1000]	# upper joint velocity limit
+				 children [
+				DEF MiddleLeftShoulder2 Segment {
+				      mass 2.539
+				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
+				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
+				      children [
+					 Inline { url "RHEX_cover/LeftShoulder2.wrl"}
+				      ] 
+				  }
+					DEF JointML2 Joint {
+					  jointType "rotate"
+					  jointId 17
+					  jointAxis "Z"
+					  translation 0 0 0.0
+					  rotation 1 0 0 1.57
+					  rotorInertia 0.0001 # value not know through the converter
+					  llimit [-45]	# lower joint limit
+					  ulimit [45]	# upper joint limit
+					  lvlimit [-1000]	# lower joint velocity limit
+					  uvlimit [1000]	# upper joint velocity limit
+					 children [
+					DEF MiddleLeftShoulder3 Segment {
+					      mass 1.032
+					      centerOfMass -0.016649 0.000981 -0.073556
+					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
+					      children [
+						 Inline { url "RHEX_cover/RightShoulder3.wrl"}
+					      ] 
+					  }
+						DEF JointML3 Joint {
+						  jointType "rotate"
+						  jointId 18
+						  jointAxis "Z"
+						  translation 0 0 0.127
+						  rotation 0 1 0 1.57
+
+						  rotorInertia 0.0001 # value not know through the converter
+						  llimit [-45]	# lower joint limit
+						  ulimit [45]	# upper joint limit
+						  lvlimit [-1000]	# lower joint velocity limit
+						  uvlimit [1000]	# upper joint velocity limit
+						 children [
+						DEF MiddleLeftArm Segment {
+						  mass 1.871
+						  centerOfMass 0.121884 0.000545 -0.007791
+						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
+						  children [
+						     Inline { url "RHEX_cover/LeftArm.wrl"}
+						  ] 
+						  }
+							DEF JointML4 Joint {
+							  jointType "rotate"
+							  jointId 19
+							  jointAxis "Z"
+							  translation -0.2 0 0
+							  rotation 0 0 1 1.57
+
+							  rotorInertia 0.0001 # value not know through the converter
+							  llimit [-45]	# lower joint limit
+							  ulimit [45]	# upper joint limit
+							  lvlimit [-1000]	# lower joint velocity limit
+							  uvlimit [1000]	# upper joint velocity limit
+							 children [
+							DEF MiddleLeftForearm Segment {
+							  mass 1.887
+							  centerOfMass 0.140274 0.001512 -0.002044
+							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
+							  children [
+							     Inline { url "RHEX_cover/LeftForearm.wrl"}
+							  ] 
+							  }
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+			}
+			]
+			}
+
+		      DEF Virtual_joint_BACK_L1 Joint{
+			  jointType "fixed"
+			  translation -0.171 0.0 0.35
+			  rotation 1 0 0 -1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [
+			DEF Virtual_body_BACK_L1 Segment {
+			  mass 0.0
+			  centerOfMass 0 0 0
+			  momentsOfInertia [ 0 0 0 0 0 0 0 0 0] # Approx
+			  }
+
+			DEF Virtual_joint_BACK_L2 Joint {
+			  jointType "fixed"
+			  translation 0 0 -0.07
+			  rotation 0 0 1 -1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [			      
+			      DEF BackLeftShoulder1 Segment {
+				  mass 2.453
+				  centerOfMass 0.040615 -0.000338 0.013372
+				  momentsOfInertia [ 0.016 0 0.0004 0 0.032 0.0001134 0.004 0.0001134 0.019]
+				  children [
+				     Inline { url "RHEX_cover/LeftShoulder1.wrl"}
+				  ] 
+				}
+				DEF JointBL1 Joint {
+				  jointType "rotate"
+				  jointId 20
+				  jointAxis "Z"
+				  translation 0 0 0
+				  rotation 0 0 1 0
+				  rotorInertia 0.0001 # value not know through the converter
+				  llimit [-45]	# lower joint limit
+				  ulimit [45]	# upper joint limit
+				  lvlimit [-1000]	# lower joint velocity limit
+				  uvlimit [1000]	# upper joint velocity limit
+				 children [
+				DEF BackLeftShoulder2 Segment {
+				      mass 2.539
+				      centerOfMass -0.029188 0.028369 -0.005857   # For Right component x : -0.029188 for Left 0.029188
+				      momentsOfInertia [ 0.012 0.0006 0.00046 0.0006 0.008 0.0005978 0.0046 0.0005978 0.015]
+				      children [
+					 Inline { url "RHEX_cover/LeftShoulder2.wrl"}
+				      ] 
+				  }
+					DEF JointBL2 Joint {
+					  jointType "rotate"
+					  jointId 21
+					  jointAxis "Z"
+					  translation 0 0 0.0
+					  rotation 1 0 0 1.57
+					  rotorInertia 0.0001 # value not know through the converter
+					  llimit [-45]	# lower joint limit
+					  ulimit [45]	# upper joint limit
+					  lvlimit [-1000]	# lower joint velocity limit
+					  uvlimit [1000]	# upper joint velocity limit
+					 children [
+					DEF BackLeftShoulder3 Segment {
+					      mass 1.032
+					      centerOfMass -0.016649 0.000981 -0.073556
+					      momentsOfInertia [ 0.009 0.00009 -0.00098 0.000009 0.012 0.000077 -0.00098 0.000077 0.004]
+					      children [
+						 Inline { url "RHEX_cover/RightShoulder3.wrl"}
+					      ] 
+					  }
+						DEF JointBL3 Joint {
+						  jointType "rotate"
+						  jointId 22
+						  jointAxis "Z"
+						  translation 0 0 0.127
+						  rotation 0 1 0 1.57
+
+						  rotorInertia 0.0001 # value not know through the converter
+						  llimit [-45]	# lower joint limit
+						  ulimit [45]	# upper joint limit
+						  lvlimit [-1000]	# lower joint velocity limit
+						  uvlimit [1000]	# upper joint velocity limit
+						 children [
+						DEF BackLeftArm Segment {
+						  mass 1.871
+						  centerOfMass 0.121884 0.000545 -0.007791
+						  momentsOfInertia [ 0.006 -0.0001 0.001 -0.0001 0.015 0.000088 0.001 0.000088 0.01]
+						  children [
+						     Inline { url "RHEX_cover/LeftArm.wrl"}
+						  ] 
+						  }
+							DEF JointBL4 Joint {
+							  jointType "rotate"
+							  jointId 23
+							  jointAxis "Z"
+							  translation -0.2 0 0
+							  rotation 0 0 1 1.57
+
+							  rotorInertia 0.0001 # value not know through the converter
+							  llimit [-45]	# lower joint limit
+							  ulimit [45]	# upper joint limit
+							  lvlimit [-1000]	# lower joint velocity limit
+							  uvlimit [1000]	# upper joint velocity limit
+							 children [
+							DEF BackLeftForearm Segment {
+							  mass 1.887
+							  centerOfMass 0.140274 0.001512 -0.002044
+							  momentsOfInertia [ 0.003 0.0001876 0.00007837 0.0001876 0.009 -0.00001543 0.00007837 -0.00001543 0.008]
+							  children [
+							     Inline { url "RHEX_cover/LeftForearm.wrl"}
+							  ] 
+							  }
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+								}
+								]
+			}
+			]
+			}
+			DEF Virtual_joint_HEAD1 Joint {
+			  jointType "fixed"
+			  translation 0.0 0.0 -0.45
+			  rotation 1 0 0 -1.57
+			  children [
+			DEF Virtual_body_HEAD1 Segment {
+			  mass 0.0
+			  centerOfMass 0 0 0
+			  momentsOfInertia [ 0 0 0 0 0 0 0 0 0] # Approx
+			  }
+
+			DEF Virtual_joint_HEAD2 Joint {
+			  jointType "fixed"
+			  translation 0 0 0.13
+			  rotation 0 0 1 1.57
+			  rotorInertia 0.0001 # value not know through the converter
+			  children [			      
+			      DEF B_HEAD_1 Segment {
+				  mass 1.339
+# 				  mass 0
+				  centerOfMass 0.061528 0.003448 -0.002652
+				  momentsOfInertia [0.008 0.00003429 -0.0002813 0.00003429 0.008 0.0001028 -0.0002813 0.0001028 0.0007216]
+				  children [
+				     Inline { url "RHEX_cover/BoitierFixePivotZa.wrl"}
+				  ] 
+				}
+				DEF J_HEAD_1 Joint {
+				  jointType "rotate"
+				  jointId 24
+				  jointAxis "Z"
+				  translation 0 0 0
+				  rotation 0 0 1 0
+				  rotorInertia 0.0001 # value not know through the converter
+				  llimit [-45]	# lower joint limit
+				  ulimit [45]	# upper joint limit
+				  lvlimit [-1000]	# lower joint velocity limit
+				  uvlimit [1000]	# upper joint velocity limit
+				 children [
+				DEF B_HEAD_2 Segment {
+				      mass 1.535
+# 				      mass 0
+				      centerOfMass 0.074463 0.033433 0.000963   
+				      momentsOfInertia [0.009 -0.0007646 0 -0.0007646 0.002 -0.00008777 0 -0.00008777 0.01]
+				      children [
+					 Inline { url "RHEX_cover/BoitierFixePivotYa.wrl"}
+				      ] 
+				  }
+					DEF J_HEAD_2 Joint {
+					  jointType "rotate"
+					  jointId 25
+					  jointAxis "Z"
+					  translation 0.087 0 0.0
+					  rotation 1 0 0 -1.57
+					  rotorInertia 0.0001 # value not know through the converter
+					  llimit [-45]	# lower joint limit
+					  ulimit [45]	# upper joint limit
+					  lvlimit [-1000]	# lower joint velocity limit
+					  uvlimit [1000]	# upper joint velocity limit
+					 children [
+						  DEF B_HEAD_3 Segment {
+							mass 1.045
+# 							mass 0
+							centerOfMass 0.057551 -0.058436 0.000807
+							momentsOfInertia [0.005 -0.002 0.00006294 -0.002 0.006 0.000031 0.00006294 0.000031 0.004]
+							children [
+							   Inline { url "RHEX_cover/BoitierMobilePivotYa.wrl"}
+							] 
+						    }
+								]
+								}
+								]
+								}
+								]
+			}
+			]
+			}
+]
+ }
+ ]
+joints [
+	USE WAIST,
+	USE JointFR1,
+	USE JointFR2,
+	USE JointFR3,
+	USE JointFR4,
+	USE JointMR1,
+	USE JointMR2,
+	USE JointMR3,
+	USE JointMR4,
+	USE JointBR1,
+	USE JointBR2,
+	USE JointBR3,
+	USE JointBR4,
+	USE JointFL1,
+	USE JointFL2,
+	USE JointFL3,
+	USE JointFL4,
+	USE JointML1,
+	USE JointML2,
+	USE JointML3,
+	USE JointML4,
+	USE JointBL1,
+	USE JointBL2,
+	USE JointBL3,
+	USE JointBL4,
+	USE J_HEAD_1,
+	USE J_HEAD_2,
+]
+ segments [
+	USE main_body,
+	USE FrontRightShoulder1,
+	USE FrontRightShoulder2,
+	USE FrontRightShoulder3,
+	USE FrontRightArm,
+	USE FrontRightForearm,
+	USE MiddleRightShoulder1,
+	USE MiddleRightShoulder2,
+	USE MiddleRightShoulder3,
+	USE MiddleRightArm,
+	USE MiddleRightForearm,
+	USE BackRightShoulder1,
+	USE BackRightShoulder2,
+	USE BackRightShoulder3,
+	USE BackRightArm,
+	USE BackRightForearm,
+	USE FrontLeftShoulder1,
+	USE FrontLeftShoulder2,
+	USE FrontLeftShoulder3,
+	USE FrontLeftArm,
+	USE FrontLeftForearm,
+	USE MiddleLeftShoulder1,
+	USE MiddleLeftShoulder2,
+	USE MiddleLeftShoulder3,
+	USE MiddleLeftArm,
+	USE MiddleLeftForearm,
+	USE BackLeftShoulder1,
+	USE BackLeftShoulder2,
+	USE BackLeftShoulder3,
+	USE BackLeftArm,
+	USE BackLeftForearm,
+	USE B_HEAD_1,
+	USE B_HEAD_2,
+	USE B_HEAD_3,
+]
+}
+

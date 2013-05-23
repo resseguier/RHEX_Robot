@@ -79,8 +79,8 @@ RHEXPD::RHEXPD(RTC::Manager* manager)
   // Set CORBA Service Ports
   
   // </rtc-template>
-  FP.open("/tmp/q.log");
-  FPC.open("/tmp/q_ref.log");
+  FP.open("/tmp/torque.log");
+//   FPC.open("/tmp/q_ref.log");
   count_before_start = 0;
   for(int i=0;i<DOF;i++)
 	error[i] = 0;
@@ -89,7 +89,7 @@ RHEXPD::RHEXPD(RTC::Manager* manager)
 RHEXPD::~RHEXPD()
 {
    FP.close();
-   FPC.close();
+//    FPC.close();
   closeFiles();
 //   delete [] Pgain;
 //   delete [] Dgain;
@@ -224,7 +224,7 @@ RTC::ReturnCode_t RHEXPD::onExecute(RTC::UniqueId ec_id)
     
     double tau;
     if (i < 24 )
-          tau = -(q  - q_ref[i]) * 300.0 - (dq - dq_ref[i]) * 10.0 - error[i] * 0.0;
+          tau = -(q  - q_ref[i]) * 300.0 - (dq - dq_ref[i]) * 5.0 - error[i] * 0.0;
     else if (i > 23)
 	  tau = -(q  - q_ref[i]) * 10.0 - (dq - dq_ref[i]) * 1.0;
     else
@@ -244,17 +244,17 @@ RTC::ReturnCode_t RHEXPD::onExecute(RTC::UniqueId ec_id)
 // 	if (tau >  12)	tau =  12;
 //     }
 //       
-    double satur = 450.0;
+    double satur = 45.0;
     
     if (tau < -satur)	tau = -satur;
     if (tau >  satur)	tau =  satur;
     
     m_torque.data[i] = tau;
-    FP<<  q<<" ";    
-    FPC<<  q_ref[i]<<" ";
+    FP<<  tau<<" ";    
+//     FPC<<  q_ref[i]<<" ";
   }
   FP<<std::endl;
-  FPC<<std::endl;
+//   FPC<<std::endl;
       
   m_torqueOut.write();
   
